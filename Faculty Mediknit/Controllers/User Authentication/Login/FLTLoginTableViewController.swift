@@ -73,8 +73,9 @@ class FLTLoginTableViewController: UITableViewController,UITextFieldDelegate,Und
     
     @IBAction func signInPressed(_ sender: UIButton) {
         if self.validateFields(){
-            //call API
-            print("Api called")
+            let addPhoto = self.storyboard?.instantiateViewController(withIdentifier: "AddPhotoVC") as! FLTAddPhotoViewController
+            self.navigationItem.title = ""
+            self.navigationController?.pushViewController(addPhoto, animated: true)
         }
     }
     

@@ -27,6 +27,10 @@ class FLTRegisterTableViewController: UITableViewController,UnderLineTextFieldDe
         self.view.addGestureRecognizer(singleTap)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.title = "Request an access ID"
+    }
     //MARK:- Button Actions
     
     @objc func tapAction(){

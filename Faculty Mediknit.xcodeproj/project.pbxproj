@@ -13,6 +13,8 @@
 		CE63B1CF215C99CF00B02075 /* Faculty_Mediknit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE63B1CD215C99CF00B02075 /* Faculty_Mediknit.xcdatamodeld */; };
 		CE63B1D1215C99D000B02075 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE63B1D0215C99D000B02075 /* Assets.xcassets */; };
 		CE63B1D4215C99D000B02075 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE63B1D2215C99D000B02075 /* LaunchScreen.storyboard */; };
+		CEDBABC1215CFF8B003396E6 /* FLTAddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBABC0215CFF8B003396E6 /* FLTAddPhotoViewController.swift */; };
+		CEDBABC3215D03EC003396E6 /* FLTAvatarImagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBABC2215D03EC003396E6 /* FLTAvatarImagePreviewViewController.swift */; };
 		CEF7E124215CA4AD001C8EA7 /* OFAUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7E123215CA4AD001C8EA7 /* OFAUtils.swift */; };
 		CEF7E126215CA4B1001C8EA7 /* SwiftLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7E125215CA4B1001C8EA7 /* SwiftLoader.swift */; };
 		CEF7E128215CA4B4001C8EA7 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7E127215CA4B4001C8EA7 /* Toast.swift */; };
@@ -126,6 +128,8 @@
 		CE63B1D0215C99D000B02075 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE63B1D3215C99D000B02075 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE63B1D5215C99D000B02075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDBABC0215CFF8B003396E6 /* FLTAddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTAddPhotoViewController.swift; sourceTree = "<group>"; };
+		CEDBABC2215D03EC003396E6 /* FLTAvatarImagePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTAvatarImagePreviewViewController.swift; sourceTree = "<group>"; };
 		CEF7E123215CA4AD001C8EA7 /* OFAUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OFAUtils.swift; sourceTree = "<group>"; };
 		CEF7E125215CA4B1001C8EA7 /* SwiftLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftLoader.swift; sourceTree = "<group>"; };
 		CEF7E127215CA4B4001C8EA7 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
@@ -328,9 +332,9 @@
 		CE63B1DC215C9CA500B02075 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CEF7E214215CE07F001C8EA7 /* Login */,
-				CEF7E215215CE08C001C8EA7 /* Forgot Password */,
-				CEF7E216215CE4DB001C8EA7 /* FLTRegisterTableViewController.swift */,
+				CEDBABBF215CFD41003396E6 /* User Authentication */,
+				CEDBABC0215CFF8B003396E6 /* FLTAddPhotoViewController.swift */,
+				CEDBABC2215D03EC003396E6 /* FLTAvatarImagePreviewViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -345,6 +349,24 @@
 				CEF7E16C215CA68C001C8EA7 /* SDWebCache */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CEDBABBE215CFD2E003396E6 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				CEF7E216215CE4DB001C8EA7 /* FLTRegisterTableViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		CEDBABBF215CFD41003396E6 /* User Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				CEF7E214215CE07F001C8EA7 /* Login */,
+				CEF7E215215CE08C001C8EA7 /* Forgot Password */,
+				CEDBABBE215CFD2E003396E6 /* Register */,
+			);
+			path = "User Authentication";
 			sourceTree = "<group>";
 		};
 		CEF7E12B215CA4BF001C8EA7 /* Utils */ = {
@@ -745,6 +767,7 @@
 				CEF7E161215CA677001C8EA7 /* SDWebImagePrefetcher.m in Sources */,
 				CEF7E12A215CA4BC001C8EA7 /* OFAConstants.swift in Sources */,
 				CE63B1C7215C99CF00B02075 /* AppDelegate.swift in Sources */,
+				CEDBABC1215CFF8B003396E6 /* FLTAddPhotoViewController.swift in Sources */,
 				CEF7E126215CA4B1001C8EA7 /* SwiftLoader.swift in Sources */,
 				CEF7E159215CA677001C8EA7 /* UIView+WebCacheOperation.m in Sources */,
 				CE63B1CF215C99CF00B02075 /* Faculty_Mediknit.xcdatamodeld in Sources */,
@@ -757,6 +780,7 @@
 				CEF7E16B215CA677001C8EA7 /* UIImageView+WebCache.m in Sources */,
 				CEF7E15D215CA677001C8EA7 /* SDImageCacheConfig.m in Sources */,
 				CEF7E165215CA677001C8EA7 /* SDWebImageDownloader.m in Sources */,
+				CEDBABC3215D03EC003396E6 /* FLTAvatarImagePreviewViewController.swift in Sources */,
 				CEF7E162215CA677001C8EA7 /* MKAnnotationView+WebCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

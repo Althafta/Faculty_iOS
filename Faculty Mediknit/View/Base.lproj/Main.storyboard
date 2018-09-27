@@ -321,6 +321,130 @@
             </objects>
             <point key="canvasLocation" x="-24.800000000000001" y="-1015.1424287856073"/>
         </scene>
+        <!--Add Photo View Controller-->
+        <scene sceneID="oJy-O4-Sqg">
+            <objects>
+                <viewController storyboardIdentifier="AddPhotoVC" id="kfV-ey-ZpG" customClass="FLTAddPhotoViewController" customModule="Faculty_Mediknit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bg2-Qj-yBL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default image" translatesAutoresizingMaskIntoConstraints="NO" id="xy7-gM-Tt8">
+                                <rect key="frame" x="62.5" y="118" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xy7-gM-Tt8" secondAttribute="height" multiplier="1:1" id="Sqe-4G-xbq"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7p-Ko-5ja">
+                                <rect key="frame" x="95" y="444" width="185" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="68v-rV-2Cw"/>
+                                    <constraint firstAttribute="height" constant="44" id="tyY-tV-DnU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
+                                <state key="normal" title="Add photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPhotoPressed:" destination="kfV-ey-ZpG" eventType="touchUpInside" id="pLH-nK-CSU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwG-Rw-g2F">
+                                <rect key="frame" x="156.5" y="518" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jdt-3P-6lB"/>
+                                </constraints>
+                                <state key="normal" title="Add later"/>
+                                <connections>
+                                    <action selector="addLaterPressed:" destination="kfV-ey-ZpG" eventType="touchUpInside" id="tyr-ff-uTC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IwG-Rw-g2F" firstAttribute="top" secondItem="j7p-Ko-5ja" secondAttribute="bottom" constant="30" id="0cf-dO-X6I"/>
+                            <constraint firstItem="xy7-gM-Tt8" firstAttribute="top" secondItem="fSt-iv-jBM" secondAttribute="top" constant="98" id="HgZ-Xi-sNg"/>
+                            <constraint firstItem="IwG-Rw-g2F" firstAttribute="centerX" secondItem="j7p-Ko-5ja" secondAttribute="centerX" id="LIf-ZB-VdP"/>
+                            <constraint firstItem="j7p-Ko-5ja" firstAttribute="top" secondItem="xy7-gM-Tt8" secondAttribute="bottom" constant="76" id="NeR-G1-vvW"/>
+                            <constraint firstItem="xy7-gM-Tt8" firstAttribute="centerX" secondItem="fSt-iv-jBM" secondAttribute="centerX" id="RXN-Rg-Pnu"/>
+                            <constraint firstItem="xy7-gM-Tt8" firstAttribute="leading" secondItem="fSt-iv-jBM" secondAttribute="leading" constant="62.5" id="hQt-yr-t6Q"/>
+                            <constraint firstItem="j7p-Ko-5ja" firstAttribute="centerX" secondItem="xy7-gM-Tt8" secondAttribute="centerX" id="wtT-N4-QhS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fSt-iv-jBM"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonAddLater" destination="IwG-Rw-g2F" id="bYn-HR-npu"/>
+                        <outlet property="buttonAddPhoto" destination="j7p-Ko-5ja" id="DdS-y8-NQm"/>
+                        <outlet property="imageViewAvatar" destination="xy7-gM-Tt8" id="dpf-RA-NLL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pj4-Cz-ELH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25" y="-337"/>
+        </scene>
+        <!--Avatar Image Preview View Controller-->
+        <scene sceneID="jSU-Gb-lcm">
+            <objects>
+                <viewController storyboardIdentifier="AvatarImagePreviewVC" id="YVx-61-L1e" customClass="FLTAvatarImagePreviewViewController" customModule="Faculty_Mediknit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OoN-Ib-Rrl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pwq-PO-TMu">
+                                <rect key="frame" x="0.0" y="61" width="375" height="502"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hdW-bD-GoC">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hdW-bD-GoC" secondAttribute="trailing" id="P75-QF-WkI"/>
+                                    <constraint firstItem="hdW-bD-GoC" firstAttribute="centerY" secondItem="Pwq-PO-TMu" secondAttribute="centerY" id="Ttq-9S-h6y"/>
+                                    <constraint firstItem="hdW-bD-GoC" firstAttribute="leading" secondItem="Pwq-PO-TMu" secondAttribute="leading" id="dZW-IY-2yZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="hdW-bD-GoC" secondAttribute="bottom" id="dnP-zE-IAu"/>
+                                    <constraint firstItem="hdW-bD-GoC" firstAttribute="top" secondItem="Pwq-PO-TMu" secondAttribute="top" id="jFE-qS-OLl"/>
+                                    <constraint firstItem="hdW-bD-GoC" firstAttribute="centerX" secondItem="Pwq-PO-TMu" secondAttribute="centerX" id="v8c-mQ-Dfd"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGN-H7-w0O">
+                                <rect key="frame" x="105" y="611" width="165" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="xOs-Qg-jbn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="21"/>
+                                </variation>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="YVx-61-L1e" eventType="touchUpInside" id="NqS-ko-jpK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Pwq-PO-TMu" secondAttribute="trailing" id="29A-hn-JeS"/>
+                            <constraint firstItem="Pwq-PO-TMu" firstAttribute="top" secondItem="uC5-sK-mSW" secondAttribute="top" constant="41" id="2jW-ge-egb"/>
+                            <constraint firstItem="Pwq-PO-TMu" firstAttribute="centerX" secondItem="qGN-H7-w0O" secondAttribute="centerX" id="LdI-pj-79V"/>
+                            <constraint firstItem="qGN-H7-w0O" firstAttribute="top" secondItem="Pwq-PO-TMu" secondAttribute="bottom" constant="48" id="uCK-0E-453"/>
+                            <constraint firstAttribute="bottom" secondItem="qGN-H7-w0O" secondAttribute="bottom" constant="20" symbolic="YES" id="w5N-6q-XS6"/>
+                            <constraint firstItem="Pwq-PO-TMu" firstAttribute="leading" secondItem="OoN-Ib-Rrl" secondAttribute="leading" id="yBj-wV-GOs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uC5-sK-mSW"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="qGN-H7-w0O" id="KuS-Mp-jj1"/>
+                        <outlet property="imageViewAvatar" destination="hdW-bD-GoC" id="MXj-Sv-fuH"/>
+                        <outlet property="scrollView" destination="Pwq-PO-TMu" id="gLF-al-vfU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OMC-ln-GeU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="752.79999999999995" y="-337.78110944527737"/>
+        </scene>
         <!--Register Table View Controller-->
         <scene sceneID="8pb-ln-51t">
             <objects>
@@ -890,6 +1014,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Default image" width="256" height="256"/>
         <image name="MediknitLogo" width="960" height="540"/>
         <image name="mailIcon" width="30" height="30"/>
     </resources>
