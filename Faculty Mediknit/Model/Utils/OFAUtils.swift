@@ -311,7 +311,7 @@ class OFAUtils: NSObject {
         return newImage!
     }
     class func setBackgroundForTableView(tableView:UITableView){
-        let imageView = UIImageView(image: #imageLiteral(resourceName: "App_BG"))//UIImage(named: "bgImage"))
+        let imageView = UIImageView(image: UIImage(named: "AppBG"))
         imageView.contentMode = .scaleAspectFill
         imageView.alpha = 1.0
 //        tableView.backgroundColor = CAUtils.getColorFromHexString(barTintColor)
@@ -353,34 +353,6 @@ class OFAUtils: NSObject {
         toolBar.isUserInteractionEnabled = true
         return toolBar
     }
-//
-//    class func getHTMLAttributedString(htmlString:String) -> String{
-//        var originalString = ""
-//        do {
-//            let attrStr = try NSAttributedString(data: htmlString.data(using: String.Encoding.unicode, allowLossyConversion: true)!,
-//                                                 options: [ NSAttributedString.DocumentReadingOptionKey: .documentType],
-//                                                 documentAttributes: nil)
-//            originalString = attrStr.string
-//        }catch{
-//            originalString = "Invalid String"
-//        }
-////        let returnString = originalString.components(separatedBy: "\n")[0]
-//        return originalString// OFAUtils.trimWhiteSpaceInString(returnString)
-//    }
-//
-//    class func getHTMLAttributedStringForAssessmetOptions(htmlString:String) -> String{
-//        var originalString = ""
-//        do {
-//            let attrStr = try NSAttributedString(data: htmlString.data(using: String.Encoding.unicode, allowLossyConversion: true)!,
-//                                                 options: [ NSAttributedString.DocumentReadingOptionKey: .documentType],
-//                                                 documentAttributes: nil)
-//            originalString = attrStr.string
-//        }catch{
-//            originalString = "Invalid String"
-//        }
-//        let returnString = originalString.components(separatedBy: "\n")[0]
-//        return OFAUtils.trimWhiteSpaceInString(returnString)
-//    }
     
     static func lockOrientation(_ orientation: UIInterfaceOrientationMask) {
         
@@ -459,5 +431,20 @@ extension UIImage {
         // Compute result.
         let result = UIColor(red: CGFloat(bitmap[0]) / 255.0, green: CGFloat(bitmap[1]) / 255.0, blue: CGFloat(bitmap[2]) / 255.0, alpha: CGFloat(bitmap[3]) / 255.0)
         return result
+    }
+}
+extension UIView {
+    
+    func dropShadow(scale: Bool = true) {
+        
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = UIColor.gray.cgColor
+        self.layer.shadowOpacity = 0.2
+        self.layer.shadowOffset = CGSize(width: -1, height: 1)
+        self.layer.shadowRadius = 1
+        
+        //        self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+        self.layer.shouldRasterize = true
+        self.layer.rasterizationScale = scale ? UIScreen.main.scale : 1
     }
 }

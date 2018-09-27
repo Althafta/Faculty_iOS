@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dhE-zQ-evr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,20 +9,888 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSans-Regular.ttf">
+            <string>NotoSans-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="iCj-0c-96S">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Faculty_Mediknit" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController id="dhE-zQ-evr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kIP-4a-CV8">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0wk-0N-llv" kind="relationship" relationship="rootViewController" id="VqV-Nc-unU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="per-Le-Gl0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-764" y="-1014"/>
+        </scene>
+        <!--Login Table View Controller-->
+        <scene sceneID="bzo-EJ-WPo">
+            <objects>
+                <tableViewController storyboardIdentifier="LoginTVC" id="0wk-0N-llv" customClass="FLTLoginTableViewController" customModule="Faculty_Mediknit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gIx-hY-3zp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="AU6-TT-4zF">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="134" id="XtZ-6p-GcG">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="134"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XtZ-6p-GcG" id="M55-lO-rDg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="134"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MediknitLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Z4W-Ve-yEz">
+                                                    <rect key="frame" x="95.5" y="23" width="184" height="88"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Z4W-Ve-yEz" secondAttribute="height" multiplier="48:23" id="Cem-uT-SxS"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Z4W-Ve-yEz" firstAttribute="top" secondItem="M55-lO-rDg" secondAttribute="topMargin" constant="12" id="Ixo-UZ-W9M"/>
+                                                <constraint firstItem="Z4W-Ve-yEz" firstAttribute="centerX" secondItem="M55-lO-rDg" secondAttribute="centerX" id="Kwj-j6-k2X"/>
+                                                <constraint firstItem="Z4W-Ve-yEz" firstAttribute="centerY" secondItem="M55-lO-rDg" secondAttribute="centerY" id="mhK-pB-pTA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="9iQ-mt-rgz">
+                                        <rect key="frame" x="0.0" y="134" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9iQ-mt-rgz" id="uec-lT-zsZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, there! Sign in now with www.mediknit.org credentials" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmZ-8p-WKD">
+                                                    <rect key="frame" x="16" y="11.5" width="343" height="37.5"/>
+                                                    <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lmZ-8p-WKD" firstAttribute="centerY" secondItem="uec-lT-zsZ" secondAttribute="centerY" id="KPq-yq-G0Z"/>
+                                                <constraint firstItem="lmZ-8p-WKD" firstAttribute="leading" secondItem="uec-lT-zsZ" secondAttribute="leadingMargin" id="T4z-h3-uy5"/>
+                                                <constraint firstItem="lmZ-8p-WKD" firstAttribute="trailing" secondItem="uec-lT-zsZ" secondAttribute="trailingMargin" id="dHB-sk-OyP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="80" id="d72-0p-aH1">
+                                        <rect key="frame" x="0.0" y="194" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d72-0p-aH1" id="bMu-wz-uFB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2h5-W7-dRO" customClass="UnderLineTextField" customModule="UnderLineTextField">
+                                                    <rect key="frame" x="20" y="30" width="335" height="20"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="activePlaceholderTextColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="inactivePlaceholderTextColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningPlaceholderColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorPlaceholderColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="inactiveLineColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningLineColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorLineColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningTextColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="0wk-0N-llv" id="Whf-ze-K6E"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2h5-W7-dRO" firstAttribute="centerX" secondItem="bMu-wz-uFB" secondAttribute="centerX" id="Fh4-CG-LeD"/>
+                                                <constraint firstItem="2h5-W7-dRO" firstAttribute="centerY" secondItem="bMu-wz-uFB" secondAttribute="centerY" id="ueD-KZ-DEH"/>
+                                                <constraint firstItem="2h5-W7-dRO" firstAttribute="leading" secondItem="bMu-wz-uFB" secondAttribute="leadingMargin" constant="4" id="xhg-yT-xus"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="80" id="Gmd-XV-6et">
+                                        <rect key="frame" x="0.0" y="274" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gmd-XV-6et" id="WVg-my-FsU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Access ID" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZhY-He-2mh" customClass="UnderLineTextField" customModule="UnderLineTextField">
+                                                    <rect key="frame" x="20" y="30" width="335" height="20"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="activePlaceholderTextColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="inactivePlaceholderTextColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningPlaceholderColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorPlaceholderColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="inactiveLineColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningLineColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorLineColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningTextColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="0wk-0N-llv" id="oQh-Rf-bXR"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZhY-He-2mh" firstAttribute="centerX" secondItem="WVg-my-FsU" secondAttribute="centerX" id="Ln2-2F-jbs"/>
+                                                <constraint firstItem="ZhY-He-2mh" firstAttribute="centerY" secondItem="WVg-my-FsU" secondAttribute="centerY" id="n6D-0P-8pX"/>
+                                                <constraint firstItem="ZhY-He-2mh" firstAttribute="leading" secondItem="WVg-my-FsU" secondAttribute="leadingMargin" constant="4" id="p0y-6z-qOT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="hlp-MR-dUL">
+                                        <rect key="frame" x="0.0" y="354" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hlp-MR-dUL" id="moq-l6-nky">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZv-su-wqN">
+                                                    <rect key="frame" x="21" y="7" width="179" height="36"/>
+                                                    <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
+                                                    <state key="normal" title="Forgot your Access ID?">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="forgotPasswordPressed:" destination="0wk-0N-llv" eventType="touchUpInside" id="Zb1-et-NMt"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="FZv-su-wqN" secondAttribute="bottom" constant="7" id="GDN-oj-337"/>
+                                                <constraint firstItem="FZv-su-wqN" firstAttribute="top" secondItem="moq-l6-nky" secondAttribute="top" constant="7" id="TOd-9r-lsB"/>
+                                                <constraint firstItem="FZv-su-wqN" firstAttribute="leading" secondItem="moq-l6-nky" secondAttribute="leading" constant="21" id="sEJ-ar-0jl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="cii-WT-lQH">
+                                        <rect key="frame" x="0.0" y="404" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cii-WT-lQH" id="S66-gX-omR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13D-Ho-9ud">
+                                                    <rect key="frame" x="95" y="8" width="185" height="44"/>
+                                                    <color key="backgroundColor" red="0.97095424107142858" green="0.86155133928571426" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="185" id="3oz-Kh-xov"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="15"/>
+                                                    <state key="normal" title="Sign In">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="signInPressed:" destination="0wk-0N-llv" eventType="touchUpInside" id="5wS-nj-4Kj"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="13D-Ho-9ud" firstAttribute="centerY" secondItem="S66-gX-omR" secondAttribute="centerY" id="AtW-Fo-IZG"/>
+                                                <constraint firstItem="13D-Ho-9ud" firstAttribute="centerX" secondItem="S66-gX-omR" secondAttribute="centerX" id="Oad-Rc-Mwg"/>
+                                                <constraint firstItem="13D-Ho-9ud" firstAttribute="top" secondItem="S66-gX-omR" secondAttribute="top" constant="8" id="Vd7-rj-R7E"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="55" id="WPs-zW-iA4">
+                                        <rect key="frame" x="0.0" y="464" width="375" height="55"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WPs-zW-iA4" id="m3F-ft-GT0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hHi-fh-91E">
+                                                    <rect key="frame" x="20" y="10" width="335" height="35"/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="If you don't have an access ID, ">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="click here">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="17" name="NotoSans-Bold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="!">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="17" name="NotoSans-SemiBold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="createNewAccessIDPressed:" destination="0wk-0N-llv" eventType="touchUpInside" id="1gb-QQ-NVM"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="hHi-fh-91E" secondAttribute="trailing" constant="20" id="7YR-Z0-Xkk"/>
+                                                <constraint firstItem="hHi-fh-91E" firstAttribute="top" secondItem="m3F-ft-GT0" secondAttribute="top" constant="10" id="KfO-gL-04q"/>
+                                                <constraint firstAttribute="bottom" secondItem="hHi-fh-91E" secondAttribute="bottom" constant="10" id="lWi-ow-z1P"/>
+                                                <constraint firstItem="hHi-fh-91E" firstAttribute="leading" secondItem="m3F-ft-GT0" secondAttribute="leading" constant="20" id="s20-Oz-kS9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="0wk-0N-llv" id="Rmc-y4-9Fz"/>
+                            <outlet property="delegate" destination="0wk-0N-llv" id="erz-fX-ROr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="lN9-s7-TLb"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonForgotPassword" destination="FZv-su-wqN" id="x1X-oY-UbP"/>
+                        <outlet property="buttonNewAccessID" destination="hHi-fh-91E" id="tfR-bP-tQh"/>
+                        <outlet property="buttonSignIn" destination="13D-Ho-9ud" id="Eub-eQ-qP7"/>
+                        <outlet property="textAccessID" destination="ZhY-He-2mh" id="mLF-3p-HRc"/>
+                        <outlet property="textEmail" destination="2h5-W7-dRO" id="yQf-98-822"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2PF-2e-WjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-24.800000000000001" y="-1015.1424287856073"/>
+        </scene>
+        <!--Register Table View Controller-->
+        <scene sceneID="8pb-ln-51t">
+            <objects>
+                <tableViewController storyboardIdentifier="RegisterTVC" id="FtG-2T-RB3" customClass="FLTRegisterTableViewController" customModule="Faculty_Mediknit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xzd-VU-Z5w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="Nri-Kg-c3R">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="134" id="nvw-Rb-b6O">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="134"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nvw-Rb-b6O" id="Q4N-Gh-UuM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="134"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MediknitLogo" translatesAutoresizingMaskIntoConstraints="NO" id="LII-X9-Dwz">
+                                                    <rect key="frame" x="95.5" y="23" width="184" height="88"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="LII-X9-Dwz" secondAttribute="height" multiplier="48:23" id="Zqw-m6-YiN"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LII-X9-Dwz" firstAttribute="centerY" secondItem="Q4N-Gh-UuM" secondAttribute="centerY" id="cyk-mb-ayH"/>
+                                                <constraint firstItem="LII-X9-Dwz" firstAttribute="centerX" secondItem="Q4N-Gh-UuM" secondAttribute="centerX" id="gg7-sx-pWw"/>
+                                                <constraint firstItem="LII-X9-Dwz" firstAttribute="top" secondItem="Q4N-Gh-UuM" secondAttribute="topMargin" constant="12" id="kUb-s7-GrZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="80" id="ygc-oP-weV">
+                                        <rect key="frame" x="0.0" y="134" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ygc-oP-weV" id="sXY-QH-ZhV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="039-4a-2LF" customClass="UnderLineTextField" customModule="UnderLineTextField">
+                                                    <rect key="frame" x="20" y="0.5" width="335" height="79"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="activePlaceholderTextColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="inactivePlaceholderTextColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningPlaceholderColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorPlaceholderColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="inactiveLineColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningLineColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorLineColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningTextColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="FtG-2T-RB3" id="fzs-Dk-1Mi"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="039-4a-2LF" firstAttribute="centerX" secondItem="sXY-QH-ZhV" secondAttribute="centerX" id="CGc-HA-chS"/>
+                                                <constraint firstItem="039-4a-2LF" firstAttribute="centerY" secondItem="sXY-QH-ZhV" secondAttribute="centerY" id="GI4-dc-wj7"/>
+                                                <constraint firstItem="039-4a-2LF" firstAttribute="leading" secondItem="sXY-QH-ZhV" secondAttribute="leadingMargin" constant="4" id="mnA-Ss-ilZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="80" id="ARa-2e-agz">
+                                        <rect key="frame" x="0.0" y="214" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ARa-2e-agz" id="Smq-8e-lhM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="L5N-OX-Orz" customClass="UnderLineTextField" customModule="UnderLineTextField">
+                                                    <rect key="frame" x="20" y="0.5" width="335" height="79"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="activePlaceholderTextColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="inactivePlaceholderTextColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningPlaceholderColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorPlaceholderColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="inactiveLineColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningLineColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorLineColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningTextColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="FtG-2T-RB3" id="n3J-tZ-Hwa"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="L5N-OX-Orz" firstAttribute="centerX" secondItem="Smq-8e-lhM" secondAttribute="centerX" id="FVM-Y6-Rhg"/>
+                                                <constraint firstItem="L5N-OX-Orz" firstAttribute="leading" secondItem="Smq-8e-lhM" secondAttribute="leadingMargin" constant="4" id="JSe-T1-1QM"/>
+                                                <constraint firstItem="L5N-OX-Orz" firstAttribute="centerY" secondItem="Smq-8e-lhM" secondAttribute="centerY" id="TYC-qI-bSD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="80" id="ydZ-Zj-bQC">
+                                        <rect key="frame" x="0.0" y="294" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ydZ-Zj-bQC" id="AOv-pM-xHS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="grK-TC-7gY" customClass="UnderLineTextField" customModule="UnderLineTextField">
+                                                    <rect key="frame" x="20" y="0.5" width="335" height="79"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="activePlaceholderTextColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="inactivePlaceholderTextColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningPlaceholderColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorPlaceholderColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="inactiveLineColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningLineColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorLineColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningTextColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="FtG-2T-RB3" id="M68-b7-rOa"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="grK-TC-7gY" firstAttribute="centerY" secondItem="AOv-pM-xHS" secondAttribute="centerY" id="1IC-VR-yYk"/>
+                                                <constraint firstItem="grK-TC-7gY" firstAttribute="leading" secondItem="AOv-pM-xHS" secondAttribute="leadingMargin" constant="4" id="KRr-i8-soy"/>
+                                                <constraint firstItem="grK-TC-7gY" firstAttribute="centerX" secondItem="AOv-pM-xHS" secondAttribute="centerX" id="eWH-Qg-0fc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="80" id="rWy-Px-hmq">
+                                        <rect key="frame" x="0.0" y="374" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rWy-Px-hmq" id="NiF-4M-O8X">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AQ0-GR-68U" customClass="UnderLineTextField" customModule="UnderLineTextField">
+                                                    <rect key="frame" x="20" y="0.5" width="335" height="79"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" returnKeyType="next"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="activePlaceholderTextColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="inactivePlaceholderTextColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningPlaceholderColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorPlaceholderColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="inactiveLineColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningLineColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorLineColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningTextColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="FtG-2T-RB3" id="1Ii-mf-L55"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AQ0-GR-68U" firstAttribute="centerX" secondItem="NiF-4M-O8X" secondAttribute="centerX" id="By8-76-W7d"/>
+                                                <constraint firstItem="AQ0-GR-68U" firstAttribute="leading" secondItem="NiF-4M-O8X" secondAttribute="leadingMargin" constant="4" id="d1A-J4-5N9"/>
+                                                <constraint firstItem="AQ0-GR-68U" firstAttribute="centerY" secondItem="NiF-4M-O8X" secondAttribute="centerY" id="sE3-1E-rEd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="L5R-O3-MfN">
+                                        <rect key="frame" x="0.0" y="454" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L5R-O3-MfN" id="r5Q-hj-49E">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pos-kf-f0Z">
+                                                    <rect key="frame" x="95" y="8" width="185" height="44"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="185" id="BmC-2z-9L2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="15"/>
+                                                    <state key="normal" title="Request">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="RequestPressed:" destination="FtG-2T-RB3" eventType="touchUpInside" id="Q2w-oY-xSG"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pos-kf-f0Z" firstAttribute="top" secondItem="r5Q-hj-49E" secondAttribute="top" constant="8" id="LU3-Pk-Guk"/>
+                                                <constraint firstItem="pos-kf-f0Z" firstAttribute="centerY" secondItem="r5Q-hj-49E" secondAttribute="centerY" id="tdn-TK-gJn"/>
+                                                <constraint firstItem="pos-kf-f0Z" firstAttribute="centerX" secondItem="r5Q-hj-49E" secondAttribute="centerX" id="tla-jA-9Lu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="FtG-2T-RB3" id="EpT-8Y-Fkh"/>
+                            <outlet property="delegate" destination="FtG-2T-RB3" id="Ybe-eM-abc"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="buttonRequest" destination="pos-kf-f0Z" id="1ms-c1-OBZ"/>
+                        <outlet property="textEmail" destination="grK-TC-7gY" id="1Rp-pD-7RB"/>
+                        <outlet property="textFirstName" destination="039-4a-2LF" id="kb4-uI-aea"/>
+                        <outlet property="textLastName" destination="L5N-OX-Orz" id="MhX-kj-8rF"/>
+                        <outlet property="textMobile" destination="AQ0-GR-68U" id="RZQ-wn-CYO"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aUH-Qr-YT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="753" y="-1728"/>
+        </scene>
+        <!--Forgot Password Table View Controller-->
+        <scene sceneID="p5d-Cz-NbE">
+            <objects>
+                <tableViewController storyboardIdentifier="ForgotAccessIDTVC" id="jH4-aP-Nj7" customClass="FLTForgotPasswordTableViewController" customModule="Faculty_Mediknit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="u2a-A2-lkQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="FfU-kx-cou">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="117" id="658-EH-3K7">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="117"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="658-EH-3K7" id="2MR-dg-Rb1">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="117"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MediknitLogo" translatesAutoresizingMaskIntoConstraints="NO" id="6G9-QV-PDt">
+                                                    <rect key="frame" x="113.5" y="23" width="148" height="71"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="6G9-QV-PDt" secondAttribute="height" multiplier="48:23" id="Md9-hZ-Ass"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6G9-QV-PDt" firstAttribute="centerY" secondItem="2MR-dg-Rb1" secondAttribute="centerY" id="Lri-Ve-by5"/>
+                                                <constraint firstItem="6G9-QV-PDt" firstAttribute="top" secondItem="2MR-dg-Rb1" secondAttribute="topMargin" constant="12" id="jFJ-zs-fBy"/>
+                                                <constraint firstItem="6G9-QV-PDt" firstAttribute="centerX" secondItem="2MR-dg-Rb1" secondAttribute="centerX" id="naF-1I-c65"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="90" id="dsY-fY-5Vq">
+                                        <rect key="frame" x="0.0" y="117" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dsY-fY-5Vq" id="DT3-lt-i1n">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Would you like to set a new access ID?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjg-uK-pe7">
+                                                    <rect key="frame" x="16" y="10" width="343" height="70"/>
+                                                    <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="22"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Wjg-uK-pe7" firstAttribute="top" secondItem="DT3-lt-i1n" secondAttribute="topMargin" constant="-1" id="HCq-i5-03X"/>
+                                                <constraint firstItem="Wjg-uK-pe7" firstAttribute="centerY" secondItem="DT3-lt-i1n" secondAttribute="centerY" id="RIe-Oc-ttj"/>
+                                                <constraint firstItem="Wjg-uK-pe7" firstAttribute="trailing" secondItem="DT3-lt-i1n" secondAttribute="trailingMargin" id="p2E-Di-PPV"/>
+                                                <constraint firstItem="Wjg-uK-pe7" firstAttribute="leading" secondItem="DT3-lt-i1n" secondAttribute="leadingMargin" id="sfp-Me-noZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="90" id="vcI-Mt-mbH">
+                                        <rect key="frame" x="0.0" y="207" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vcI-Mt-mbH" id="jRx-y8-uRR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the email address associated with your Mediknit account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrY-k4-unJ">
+                                                    <rect key="frame" x="16" y="10" width="343" height="70"/>
+                                                    <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="20"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="CrY-k4-unJ" firstAttribute="top" secondItem="jRx-y8-uRR" secondAttribute="top" constant="10" id="4Cv-EV-Uha"/>
+                                                <constraint firstItem="CrY-k4-unJ" firstAttribute="leading" secondItem="jRx-y8-uRR" secondAttribute="leading" constant="16" id="NL6-Ir-xzG"/>
+                                                <constraint firstAttribute="trailing" secondItem="CrY-k4-unJ" secondAttribute="trailing" constant="16" id="rTS-oP-SpE"/>
+                                                <constraint firstAttribute="bottom" secondItem="CrY-k4-unJ" secondAttribute="bottom" constant="10" id="ube-Af-d4k"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="80" id="5fX-bt-bXj">
+                                        <rect key="frame" x="0.0" y="297" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5fX-bt-bXj" id="a5i-7S-D1k">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SiU-dA-Uxu" customClass="UnderLineTextField" customModule="UnderLineTextField">
+                                                    <rect key="frame" x="20" y="0.5" width="335" height="79"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="activePlaceholderTextColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="inactivePlaceholderTextColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningPlaceholderColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorPlaceholderColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="inactiveLineColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningLineColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorLineColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                            <color key="value" red="0.92941176469999998" green="0.1058823529" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="warningTextColor">
+                                                            <color key="value" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="jH4-aP-Nj7" id="mGO-TU-la1"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SiU-dA-Uxu" firstAttribute="centerY" secondItem="a5i-7S-D1k" secondAttribute="centerY" id="dkb-rC-q4R"/>
+                                                <constraint firstItem="SiU-dA-Uxu" firstAttribute="leading" secondItem="a5i-7S-D1k" secondAttribute="leadingMargin" constant="4" id="hBH-eX-cqD"/>
+                                                <constraint firstItem="SiU-dA-Uxu" firstAttribute="centerX" secondItem="a5i-7S-D1k" secondAttribute="centerX" id="woN-UE-usw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="60" id="iHf-c7-0tA">
+                                        <rect key="frame" x="0.0" y="377" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iHf-c7-0tA" id="9qT-eu-UDJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="XBF-Xi-oja">
+                                        <rect key="frame" x="0.0" y="437" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XBF-Xi-oja" id="tFL-iD-zQr">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUX-O9-yQp">
+                                                    <rect key="frame" x="95" y="8" width="185" height="44"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="185" id="d98-iU-Nmq"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="15"/>
+                                                    <state key="normal" title="Reset access ID">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="resetAccessIDPressed:" destination="jH4-aP-Nj7" eventType="touchUpInside" id="9xN-HI-3R8"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BUX-O9-yQp" firstAttribute="centerX" secondItem="tFL-iD-zQr" secondAttribute="centerX" id="M8b-4i-JQk"/>
+                                                <constraint firstItem="BUX-O9-yQp" firstAttribute="centerY" secondItem="tFL-iD-zQr" secondAttribute="centerY" id="Zzg-b5-2kf"/>
+                                                <constraint firstItem="BUX-O9-yQp" firstAttribute="top" secondItem="tFL-iD-zQr" secondAttribute="top" constant="8" id="qo3-WZ-YZn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="jH4-aP-Nj7" id="EAj-3Z-5X8"/>
+                            <outlet property="delegate" destination="jH4-aP-Nj7" id="a4L-Xz-F5U"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="buttonReset" destination="BUX-O9-yQp" id="yIy-m6-tv5"/>
+                        <outlet property="textEmail" destination="SiU-dA-Uxu" id="B6f-he-Is8"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPl-hF-Uza" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="752.79999999999995" y="-1014.2428785607198"/>
+        </scene>
+        <!--Check Email View Controller-->
+        <scene sceneID="p3m-UK-CRz">
+            <objects>
+                <viewController storyboardIdentifier="CheckEmailVC" id="SQK-ua-0fH" customClass="FLTCheckEmailViewController" customModule="Faculty_Mediknit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8gj-oJ-n6l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MediknitLogo" translatesAutoresizingMaskIntoConstraints="NO" id="9Qp-Xb-AbP">
+                                <rect key="frame" x="74" y="38" width="227" height="109"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9Qp-Xb-AbP" secondAttribute="height" multiplier="227:109" id="52G-CD-RZW"/>
+                                    <constraint firstAttribute="height" constant="109" id="UXh-KJ-QJF"/>
+                                    <constraint firstAttribute="width" constant="227" id="wEw-KL-shf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipI-Ur-920">
+                                <rect key="frame" x="67.5" y="567" width="240" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="O3F-fc-eE8"/>
+                                    <constraint firstAttribute="width" constant="240" id="abe-0S-ozv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="15"/>
+                                <state key="normal" title="Check email">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkEmailPressed:" destination="SQK-ua-0fH" eventType="touchUpInside" id="ST2-3y-E8G"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We've sent you an email with a link to reset your access ID" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWZ-S1-LDa">
+                                <rect key="frame" x="16" y="359" width="343" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="Paz-XE-spb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="20"/>
+                                </variation>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mailIcon" translatesAutoresizingMaskIntoConstraints="NO" id="2kE-Le-y4t">
+                                <rect key="frame" x="137.5" y="237" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.95662969350814819" green="0.96071344614028931" blue="0.96887880563735962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="3TI-66-Grq"/>
+                                    <constraint firstAttribute="height" constant="100" id="tQ8-LF-Ibu"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="L8C-x9-3Xi" firstAttribute="trailing" secondItem="xWZ-S1-LDa" secondAttribute="trailing" constant="16" id="6hE-0s-GYt"/>
+                            <constraint firstItem="2kE-Le-y4t" firstAttribute="centerX" secondItem="8gj-oJ-n6l" secondAttribute="centerX" id="Dan-U6-BWq"/>
+                            <constraint firstItem="xWZ-S1-LDa" firstAttribute="leading" secondItem="L8C-x9-3Xi" secondAttribute="leading" constant="16" id="Vie-4c-dcQ"/>
+                            <constraint firstItem="L8C-x9-3Xi" firstAttribute="bottom" secondItem="ipI-Ur-920" secondAttribute="bottom" constant="40" id="Wn8-pq-Zk9"/>
+                            <constraint firstItem="ipI-Ur-920" firstAttribute="centerX" secondItem="L8C-x9-3Xi" secondAttribute="centerX" id="Zmz-Yh-8gt"/>
+                            <constraint firstItem="9Qp-Xb-AbP" firstAttribute="top" secondItem="L8C-x9-3Xi" secondAttribute="top" constant="18" id="ali-tc-iKn"/>
+                            <constraint firstItem="xWZ-S1-LDa" firstAttribute="top" secondItem="2kE-Le-y4t" secondAttribute="bottom" constant="22" id="nJN-ha-hVF"/>
+                            <constraint firstItem="9Qp-Xb-AbP" firstAttribute="centerX" secondItem="2kE-Le-y4t" secondAttribute="centerX" id="weM-UA-K8U"/>
+                            <constraint firstItem="2kE-Le-y4t" firstAttribute="centerY" secondItem="8gj-oJ-n6l" secondAttribute="centerY" constant="-46.5" id="woa-mc-cZP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L8C-x9-3Xi"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonCheckEmail" destination="ipI-Ur-920" id="CJ8-e6-HQR"/>
+                        <outlet property="imageViewIcon" destination="2kE-Le-y4t" id="SEw-bj-aBO"/>
+                        <outlet property="labelMessage" destination="xWZ-S1-LDa" id="qia-AO-3om"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Fy-8K-ger" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1532" y="-1014.2428785607198"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MediknitLogo" width="960" height="540"/>
+        <image name="mailIcon" width="30" height="30"/>
+    </resources>
 </document>
