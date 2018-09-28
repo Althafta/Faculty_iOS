@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import FAPanels
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    func initializeDashboard(){
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let leftMenuVC: FLTLeftSideMenuTableViewController = mainStoryboard.instantiateViewController(withIdentifier: "LeftSideMenuTVC") as! FLTLeftSideMenuTableViewController
+        let centerVC = mainStoryboard.instantiateViewController(withIdentifier: "DashboardTabVC") as! FLTDashboardViewController
+        let centerNavVC = UINavigationController(rootViewController: centerVC)
+        
+        let rootController = FAPanelController()
+        _ = rootController.center(centerNavVC).left(leftMenuVC)
+        rootController.leftPanelPosition = .front
+        
+        self.window?.rootViewController = rootController
+        self.window?.makeKeyAndVisible()
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

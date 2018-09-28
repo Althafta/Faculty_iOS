@@ -29,7 +29,7 @@ class FLTLoginTableViewController: UITableViewController,UITextFieldDelegate,Und
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent=true
         self.navigationController?.view.backgroundColor = OFAUtils.getColorFromHexString(barTintColor)
-        self.navigationController?.navigationBar.tintColor = OFAUtils.getColorFromHexString(barTintColor)
+        self.navigationController?.navigationBar.tintColor = UIColor.black//OFAUtils.getColorFromHexString(barTintColor)
         
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(self.tapAction))
         singleTap.numberOfTapsRequired = 1
@@ -72,11 +72,13 @@ class FLTLoginTableViewController: UITableViewController,UITextFieldDelegate,Und
     }
     
     @IBAction func signInPressed(_ sender: UIButton) {
-        if self.validateFields(){
-            let addPhoto = self.storyboard?.instantiateViewController(withIdentifier: "AddPhotoVC") as! FLTAddPhotoViewController
-            self.navigationItem.title = ""
-            self.navigationController?.pushViewController(addPhoto, animated: true)
-        }
+//        if self.validateFields(){
+//            let addPhoto = self.storyboard?.instantiateViewController(withIdentifier: "AddPhotoVC") as! FLTAddPhotoViewController
+//            self.navigationItem.title = ""
+//            self.navigationController?.pushViewController(addPhoto, animated: true)
+//        }
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        delegate.initializeDashboard()
     }
     
     @IBAction func createNewAccessIDPressed(_ sender: UIButton) {

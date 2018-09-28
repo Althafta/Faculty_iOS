@@ -5,3 +5,4 @@
 #import "Reachability.h"
 #import "UIImageView+WebCache.h"
 #import "HandleNullValues.h"
+#import "UIImageView+Letters.h"

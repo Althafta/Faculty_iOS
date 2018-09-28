@@ -95,7 +95,8 @@ class FLTProfileInfoTableViewController: UITableViewController,UnderLineTextFiel
     
     @IBAction func donePressed(_ sender: UIButton) {
         if validateFields(){
-            //goto Dashboard/AllQuestions(unanswered)
+            let delegate = UIApplication.shared.delegate as! AppDelegate
+            delegate.initializeDashboard()
         }
     }
     
