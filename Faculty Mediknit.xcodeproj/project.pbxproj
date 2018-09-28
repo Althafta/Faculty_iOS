@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		64F696D32DDE18691CDFE6C0 /* Pods_Faculty_Mediknit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E777DC1C9CCA4CC5621BF372 /* Pods_Faculty_Mediknit.framework */; };
+		CE602F11215DECC3005D8E7F /* FLTProfileInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE602F10215DECC3005D8E7F /* FLTProfileInfoTableViewController.swift */; };
 		CE63B1C7215C99CF00B02075 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63B1C6215C99CF00B02075 /* AppDelegate.swift */; };
 		CE63B1CC215C99CF00B02075 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE63B1CA215C99CF00B02075 /* Main.storyboard */; };
 		CE63B1CF215C99CF00B02075 /* Faculty_Mediknit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE63B1CD215C99CF00B02075 /* Faculty_Mediknit.xcdatamodeld */; };
@@ -121,6 +122,7 @@
 /* Begin PBXFileReference section */
 		7FFA5B6AF802B14DCF784D09 /* Pods-Faculty Mediknit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faculty Mediknit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Faculty Mediknit/Pods-Faculty Mediknit.debug.xcconfig"; sourceTree = "<group>"; };
 		9E07DF6C5EE9DDB7B60A5C93 /* Pods-Faculty Mediknit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faculty Mediknit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Faculty Mediknit/Pods-Faculty Mediknit.release.xcconfig"; sourceTree = "<group>"; };
+		CE602F10215DECC3005D8E7F /* FLTProfileInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTProfileInfoTableViewController.swift; sourceTree = "<group>"; };
 		CE63B1C3215C99CF00B02075 /* Faculty Mediknit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Faculty Mediknit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE63B1C6215C99CF00B02075 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE63B1CB215C99CF00B02075 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -286,6 +288,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE602F0F215DEBFF005D8E7F /* Avatar */ = {
+			isa = PBXGroup;
+			children = (
+				CEDBABC0215CFF8B003396E6 /* FLTAddPhotoViewController.swift */,
+				CEDBABC2215D03EC003396E6 /* FLTAvatarImagePreviewViewController.swift */,
+			);
+			path = Avatar;
+			sourceTree = "<group>";
+		};
 		CE63B1BA215C99CE00B02075 = {
 			isa = PBXGroup;
 			children = (
@@ -333,8 +344,8 @@
 			isa = PBXGroup;
 			children = (
 				CEDBABBF215CFD41003396E6 /* User Authentication */,
-				CEDBABC0215CFF8B003396E6 /* FLTAddPhotoViewController.swift */,
-				CEDBABC2215D03EC003396E6 /* FLTAvatarImagePreviewViewController.swift */,
+				CE602F0F215DEBFF005D8E7F /* Avatar */,
+				CE602F10215DECC3005D8E7F /* FLTProfileInfoTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -700,6 +711,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Faculty Mediknit/Pods-Faculty Mediknit-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${PODS_ROOT}/Instabug/Instabug.framework",
 				"${PODS_ROOT}/Instabug/Instabug.framework.dSYM",
 				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
@@ -710,6 +722,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Instabug.framework",
 				"${DWARF_DSYM_FOLDER_PATH}/Instabug.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
@@ -779,6 +792,7 @@
 				CEF7E164215CA677001C8EA7 /* SDWebImageCompat.m in Sources */,
 				CEF7E16B215CA677001C8EA7 /* UIImageView+WebCache.m in Sources */,
 				CEF7E15D215CA677001C8EA7 /* SDImageCacheConfig.m in Sources */,
+				CE602F11215DECC3005D8E7F /* FLTProfileInfoTableViewController.swift in Sources */,
 				CEF7E165215CA677001C8EA7 /* SDWebImageDownloader.m in Sources */,
 				CEDBABC3215D03EC003396E6 /* FLTAvatarImagePreviewViewController.swift in Sources */,
 				CEF7E162215CA677001C8EA7 /* MKAnnotationView+WebCache.m in Sources */,

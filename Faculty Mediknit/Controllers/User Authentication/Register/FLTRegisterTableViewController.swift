@@ -94,6 +94,17 @@ class FLTRegisterTableViewController: UITableViewController,UnderLineTextFieldDe
         return false
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        var maxLength = 30
+        if textField == self.textMobile{
+            maxLength = 10
+        }
+        let currentString: NSString = textField.text! as NSString
+        let newString: NSString =
+            currentString.replacingCharacters(in: range, with: string) as NSString
+        return newString.length <= maxLength
+    }
+    
     func textFieldValidate(underLineTextField: UnderLineTextField) throws {
         switch underLineTextField {
         case self.textEmail:
@@ -112,8 +123,6 @@ class FLTRegisterTableViewController: UITableViewController,UnderLineTextFieldDe
             if OFAUtils.isWhiteSpace(self.textMobile.text!){
                 throw UnderLineTextFieldErrors.error(message: "Enter Mobile number")
             }else if (self.textMobile.text! as NSString).length < 10{
-                throw UnderLineTextFieldErrors.error(message: "Enter a valid Mobile number")
-            }else if (self.textMobile.text! as NSString).length > 12{
                 throw UnderLineTextFieldErrors.error(message: "Enter a valid Mobile number")
             }
         default:

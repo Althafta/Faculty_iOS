@@ -12,7 +12,7 @@ import Foundation
 
 var DomainKey = "Domain_Key"
 
-let barTintColor = "4463b3"//primary
+let barTintColor = "000000"//primary
 
 let device_token="DEVICE_TOKEN"
 

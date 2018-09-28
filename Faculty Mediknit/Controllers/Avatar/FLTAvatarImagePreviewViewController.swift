@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol avatarPickerDelegate {
+    func getPickedImage(image:UIImage)
+}
+
 class FLTAvatarImagePreviewViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIScrollViewDelegate {
 
     @IBOutlet weak var imageViewAvatar: UIImageView!
@@ -17,6 +21,7 @@ class FLTAvatarImagePreviewViewController: UIViewController,UIImagePickerControl
     var actionSheet = UIAlertController()
     
     var imageData:Data?
+    var delegate:avatarPickerDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,7 +116,8 @@ class FLTAvatarImagePreviewViewController: UIViewController,UIImagePickerControl
     //MARK:- Button Action
 
     @IBAction func doneButtonPressed(_ sender: UIButton) {
-        
+        self.delegate.getPickedImage(image: self.imageViewAvatar.image!)
+        self.navigationController?.popViewController(animated: true)
     }
     
     //MARK:- ScrollView Delegate
