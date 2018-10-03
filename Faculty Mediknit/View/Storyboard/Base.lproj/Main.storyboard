@@ -92,7 +92,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2h5-W7-dRO" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                                    <rect key="frame" x="20" y="0.5" width="335" height="79"/>
+                                                    <rect key="frame" x="20" y="28" width="335" height="24"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
@@ -149,7 +149,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Access ID" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZhY-He-2mh" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                                    <rect key="frame" x="20" y="0.5" width="335" height="79"/>
+                                                    <rect key="frame" x="20" y="28" width="335" height="24"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
@@ -351,7 +351,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwG-Rw-g2F">
-                                <rect key="frame" x="151" y="518" width="73" height="30"/>
+                                <rect key="frame" x="153" y="518" width="69" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="jdt-3P-6lB"/>
                                 </constraints>
@@ -362,7 +362,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rK-gx-00Q">
-                                <rect key="frame" x="130.5" y="452" width="114" height="36"/>
+                                <rect key="frame" x="132.5" y="452" width="110" height="32"/>
                                 <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                 <state key="normal" title="Change Photo"/>
                                 <connections>
@@ -497,18 +497,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="hKD-p3-4h2">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="163"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppBG" translatesAutoresizingMaskIntoConstraints="NO" id="mSm-Qr-fhI">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="163"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QhX-r5-LQE">
+                                    <rect key="frame" x="96" y="51" width="183" height="61"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="61" id="4DM-50-iPB"/>
+                                        <constraint firstAttribute="width" constant="183" id="Mln-NK-WGh"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="5"/>
+                                    <state key="normal" title="1243 Thanks" image="ThumbsUp">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="mSm-Qr-fhI" secondAttribute="bottom" id="3Fk-Wx-u3h"/>
+                                <constraint firstItem="QhX-r5-LQE" firstAttribute="centerY" secondItem="hKD-p3-4h2" secondAttribute="centerY" id="D4h-c5-nKf"/>
+                                <constraint firstItem="QhX-r5-LQE" firstAttribute="centerX" secondItem="hKD-p3-4h2" secondAttribute="centerX" id="Ikw-fz-drd"/>
+                                <constraint firstItem="mSm-Qr-fhI" firstAttribute="top" secondItem="hKD-p3-4h2" secondAttribute="top" id="RKL-zk-513"/>
+                                <constraint firstAttribute="trailing" secondItem="mSm-Qr-fhI" secondAttribute="trailing" id="aoF-4c-K5G"/>
+                                <constraint firstItem="mSm-Qr-fhI" firstAttribute="leading" secondItem="hKD-p3-4h2" secondAttribute="leading" id="iQW-uM-65L"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="UO4-x2-wQR"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AllQuestionsCell" rowHeight="154" id="pUG-WB-Gg3" customClass="FLTAllQuestionsTableViewCell" customModule="Faculty_Mediknit" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="154"/>
+                                <rect key="frame" x="0.0" y="191" width="375" height="154"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pUG-WB-Gg3" id="bcP-yN-ymd">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="154"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4R-Kn-X89">
+                                        <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4R-Kn-X89">
                                             <rect key="frame" x="16" y="10" width="310" height="80"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" shipmentTrackingNumber="YES" flightNumber="YES" lookupSuggestion="YES"/>
@@ -588,10 +620,222 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Questions" id="npr-se-kQ3"/>
+                    <connections>
+                        <outlet property="buttonHeader" destination="QhX-r5-LQE" id="LjE-2h-ejS"/>
+                        <outlet property="buttonSort" destination="SgL-9J-mhm" id="DGK-GR-mai"/>
+                        <outlet property="headerView" destination="hKD-p3-4h2" id="L3R-zT-NAG"/>
+                        <outlet property="imageViewHeader" destination="mSm-Qr-fhI" id="zsH-8H-DXL"/>
+                        <outlet property="popUpView" destination="lA5-Xk-0PC" id="afK-Am-gCj"/>
+                        <outlet property="sectionHeaderView" destination="rX9-f1-aaX" id="Aff-pa-K3c"/>
+                        <outlet property="segmentControlHeader" destination="phM-2F-vUb" id="eUX-33-Wvc"/>
+                        <outlet property="sortHeading" destination="Lg7-uv-DLK" id="Vuy-l9-F2n"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DnX-pv-ZnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="rX9-f1-aaX">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NavigationBG" translatesAutoresizingMaskIntoConstraints="NO" id="t4C-J0-00E">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                        </imageView>
+                        <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="phM-2F-vUb" customClass="TabySegmentedControl" customModule="Faculty_Mediknit" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <segments>
+                                <segment title="Unanswered"/>
+                                <segment title="Answered"/>
+                            </segments>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="segmentControlSelected:" destination="YAo-Pl-e3t" eventType="valueChanged" id="tIL-ho-JRQ"/>
+                            </connections>
+                        </segmentedControl>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFn-q7-agO">
+                            <rect key="frame" x="0.0" y="48" width="375" height="52"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lg7-uv-DLK">
+                                    <rect key="frame" x="20" y="11" width="43" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="dLn-sH-xC1"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgL-9J-mhm">
+                                    <rect key="frame" x="322" y="11" width="33" height="30"/>
+                                    <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
+                                    <state key="normal" title="Sort"/>
+                                    <connections>
+                                        <action selector="sortActionPressed:" destination="YAo-Pl-e3t" eventType="touchUpInside" id="bNU-ll-orl"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="Lg7-uv-DLK" secondAttribute="bottom" constant="11" id="6Jq-qP-amr"/>
+                                <constraint firstItem="Lg7-uv-DLK" firstAttribute="leading" secondItem="AFn-q7-agO" secondAttribute="leading" constant="20" id="MEl-ge-bSK"/>
+                                <constraint firstAttribute="trailing" secondItem="SgL-9J-mhm" secondAttribute="trailing" constant="20" id="eE5-5M-oBt"/>
+                                <constraint firstAttribute="bottom" secondItem="SgL-9J-mhm" secondAttribute="bottom" constant="11" id="hSM-9I-TzC"/>
+                                <constraint firstItem="SgL-9J-mhm" firstAttribute="top" secondItem="AFn-q7-agO" secondAttribute="top" constant="11" id="o7n-Du-kW0"/>
+                                <constraint firstItem="Lg7-uv-DLK" firstAttribute="top" secondItem="AFn-q7-agO" secondAttribute="top" constant="11" id="zZ9-Iv-y9w"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="AFn-q7-agO" firstAttribute="trailing" secondItem="zpy-Yx-DGa" secondAttribute="trailing" id="403-j9-qg5"/>
+                        <constraint firstItem="phM-2F-vUb" firstAttribute="leading" secondItem="zpy-Yx-DGa" secondAttribute="leading" id="B3Y-ZT-ak0"/>
+                        <constraint firstItem="AFn-q7-agO" firstAttribute="top" secondItem="phM-2F-vUb" secondAttribute="bottom" id="ESF-4L-heF"/>
+                        <constraint firstItem="phM-2F-vUb" firstAttribute="trailing" secondItem="zpy-Yx-DGa" secondAttribute="trailing" id="Q04-ag-58x"/>
+                        <constraint firstItem="phM-2F-vUb" firstAttribute="top" secondItem="zpy-Yx-DGa" secondAttribute="top" id="ZJo-52-dia"/>
+                        <constraint firstItem="t4C-J0-00E" firstAttribute="trailing" secondItem="zpy-Yx-DGa" secondAttribute="trailing" id="fAV-5V-EjG"/>
+                        <constraint firstItem="t4C-J0-00E" firstAttribute="leading" secondItem="zpy-Yx-DGa" secondAttribute="leading" id="hHv-WX-G20"/>
+                        <constraint firstItem="t4C-J0-00E" firstAttribute="top" secondItem="zpy-Yx-DGa" secondAttribute="top" id="kpq-nr-6eN"/>
+                        <constraint firstItem="t4C-J0-00E" firstAttribute="height" secondItem="phM-2F-vUb" secondAttribute="height" id="otH-fe-YUB"/>
+                        <constraint firstItem="AFn-q7-agO" firstAttribute="leading" secondItem="zpy-Yx-DGa" secondAttribute="leading" id="t8P-1v-cCQ"/>
+                        <constraint firstItem="AFn-q7-agO" firstAttribute="bottom" secondItem="zpy-Yx-DGa" secondAttribute="bottom" id="zok-HK-ZHE"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="zpy-Yx-DGa"/>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" id="lA5-Xk-0PC" customClass="FLTPopUpView" customModule="Faculty_Mediknit" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="232"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dB3-q8-bCc">
+                            <rect key="frame" x="0.0" y="41" width="375" height="146"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <prototypes>
+                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="popUpListCell" id="ggN-nA-E0U" customClass="FLTPopupHelperTableViewCell" customModule="Faculty_Mediknit" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ggN-nA-E0U" id="uaH-4b-2cD">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGZ-5y-Mdi">
+                                                <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
+                                                <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Default" image="checkmarkUnselected">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <state key="selected" image="checkmarkSelected"/>
+                                                <connections>
+                                                    <action selector="buttonOptionPressed:" destination="lA5-Xk-0PC" eventType="touchUpInside" id="1wL-5i-tz3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="KGZ-5y-Mdi" secondAttribute="trailing" constant="15" id="1Cg-SK-C5A"/>
+                                            <constraint firstAttribute="bottom" secondItem="KGZ-5y-Mdi" secondAttribute="bottom" id="CpO-op-4iL"/>
+                                            <constraint firstItem="KGZ-5y-Mdi" firstAttribute="top" secondItem="uaH-4b-2cD" secondAttribute="top" id="JoW-va-4UI"/>
+                                            <constraint firstItem="KGZ-5y-Mdi" firstAttribute="leading" secondItem="uaH-4b-2cD" secondAttribute="leading" constant="15" id="sTG-gT-HWj"/>
+                                        </constraints>
+                                    </tableViewCellContentView>
+                                    <connections>
+                                        <outlet property="buttonPopUpOption" destination="KGZ-5y-Mdi" id="pmP-lH-eA3"/>
+                                    </connections>
+                                </tableViewCell>
+                            </prototypes>
+                            <connections>
+                                <outlet property="dataSource" destination="lA5-Xk-0PC" id="LSu-jP-8Ha"/>
+                                <outlet property="delegate" destination="lA5-Xk-0PC" id="CLJ-bD-Oca"/>
+                            </connections>
+                        </tableView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMM-Fi-eIh">
+                            <rect key="frame" x="16" y="0.0" width="43" height="41"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="41" id="LEk-11-1S4"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvN-tn-jce">
+                            <rect key="frame" x="296" y="187" width="79" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="Lig-sj-qmD"/>
+                                <constraint firstAttribute="width" constant="79" id="tQM-WI-anb"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
+                            <state key="normal" title="Cancel"/>
+                            <connections>
+                                <action selector="cancelPopUpPressed:" destination="YAo-Pl-e3t" eventType="touchUpInside" id="5ug-nL-iJZ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="hvN-tn-jce" firstAttribute="trailing" secondItem="Rqe-3a-BjL" secondAttribute="trailing" id="DME-Pb-sWX"/>
+                        <constraint firstItem="oMM-Fi-eIh" firstAttribute="top" secondItem="Rqe-3a-BjL" secondAttribute="top" id="Euj-Lp-PGV"/>
+                        <constraint firstItem="oMM-Fi-eIh" firstAttribute="leading" secondItem="Rqe-3a-BjL" secondAttribute="leading" constant="16" id="IuP-mx-GZW"/>
+                        <constraint firstItem="hvN-tn-jce" firstAttribute="top" secondItem="dB3-q8-bCc" secondAttribute="bottom" id="Yh4-sv-2XZ"/>
+                        <constraint firstItem="dB3-q8-bCc" firstAttribute="trailing" secondItem="Rqe-3a-BjL" secondAttribute="trailing" id="cNk-yc-LKm"/>
+                        <constraint firstItem="dB3-q8-bCc" firstAttribute="leading" secondItem="Rqe-3a-BjL" secondAttribute="leading" id="hgr-fl-qaR"/>
+                        <constraint firstItem="dB3-q8-bCc" firstAttribute="top" secondItem="oMM-Fi-eIh" secondAttribute="bottom" id="uLZ-en-XW0"/>
+                        <constraint firstItem="hvN-tn-jce" firstAttribute="bottom" secondItem="Rqe-3a-BjL" secondAttribute="bottom" id="xWh-cn-2y6"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="Rqe-3a-BjL"/>
+                    <connections>
+                        <outlet property="labelPopUpHeading" destination="oMM-Fi-eIh" id="Q5f-xS-GOX"/>
+                        <outlet property="tableViewList" destination="dB3-q8-bCc" id="fSd-Em-yfR"/>
+                    </connections>
+                </view>
             </objects>
             <point key="canvasLocation" x="-24.800000000000001" y="386.35682158920542"/>
+        </scene>
+        <!--Question Details Table View Controller-->
+        <scene sceneID="aMp-DD-VKG">
+            <objects>
+                <tableViewController storyboardIdentifier="QuestionDetailsTVC" id="6nZ-PU-SBb" customClass="FLTQuestionDetailsTableViewController" customModule="Faculty_Mediknit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Beb-jq-Zj4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="3ZS-tK-gke">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="odM-nu-Pk1">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="odM-nu-Pk1" id="082-vt-h2m">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="obW-ZN-xtJ">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="obW-ZN-xtJ" id="oWl-3u-ib9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.37647058820000001" green="0.47843137250000001" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5s1-c1-rjC">
+                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5s1-c1-rjC" id="cSS-bo-lBh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.97095424109999995" green="0.86155133930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="6nZ-PU-SBb" id="AmY-iQ-aRT"/>
+                            <outlet property="delegate" destination="6nZ-PU-SBb" id="dci-2a-vqL"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3N2-X4-11V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="753" y="386"/>
         </scene>
         <!--Avatar Image Preview View Controller-->
         <scene sceneID="jSU-Gb-lcm">
@@ -653,7 +897,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OMC-ln-GeU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="733" y="-238"/>
+            <point key="canvasLocation" x="753" y="-338"/>
         </scene>
         <!--Profile Info Table View Controller-->
         <scene sceneID="B0k-kH-TLt">
@@ -819,7 +1063,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Affliation/Institution" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Nfx-cX-DUu" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                                    <rect key="frame" x="20" y="0.5" width="335" height="79"/>
+                                                    <rect key="frame" x="20" y="28" width="335" height="24"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
@@ -875,7 +1119,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Designation" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0pQ-SA-ZXk" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                                    <rect key="frame" x="20" y="0.5" width="335" height="79"/>
+                                                    <rect key="frame" x="20" y="28" width="335" height="24"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
@@ -931,7 +1175,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MCI/Medical Council Number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="q35-Eh-THd" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                                    <rect key="frame" x="20" y="0.5" width="335" height="79"/>
+                                                    <rect key="frame" x="20" y="28" width="335" height="24"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
@@ -1070,7 +1314,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="039-4a-2LF" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                                    <rect key="frame" x="20" y="0.5" width="335" height="79"/>
+                                                    <rect key="frame" x="20" y="28" width="335" height="24"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
@@ -1126,7 +1370,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="L5N-OX-Orz" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                                    <rect key="frame" x="20" y="0.5" width="335" height="79"/>
+                                                    <rect key="frame" x="20" y="28" width="335" height="24"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
@@ -1182,7 +1426,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="grK-TC-7gY" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                                    <rect key="frame" x="20" y="0.5" width="335" height="79"/>
+                                                    <rect key="frame" x="20" y="28" width="335" height="24"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
@@ -1238,7 +1482,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AQ0-GR-68U" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                                    <rect key="frame" x="20" y="0.5" width="335" height="79"/>
+                                                    <rect key="frame" x="20" y="28" width="335" height="24"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" returnKeyType="next"/>
@@ -1420,7 +1664,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SiU-dA-Uxu" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                                    <rect key="frame" x="20" y="0.5" width="335" height="79"/>
+                                                    <rect key="frame" x="20" y="28" width="335" height="24"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done"/>
@@ -1599,8 +1843,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AppBG" width="1200" height="1000"/>
         <image name="Default image" width="256" height="256"/>
         <image name="MediknitLogo" width="960" height="540"/>
+        <image name="NavigationBG" width="512" height="100"/>
+        <image name="ThumbsUp" width="32" height="32"/>
+        <image name="checkmarkSelected" width="25" height="25"/>
+        <image name="checkmarkUnselected" width="25" height="25"/>
         <image name="dashboardArrowDown" width="25" height="25"/>
         <image name="mailIcon" width="30" height="30"/>
         <image name="optionIcon" width="32" height="32"/>

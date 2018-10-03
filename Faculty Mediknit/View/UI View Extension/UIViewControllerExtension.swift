@@ -14,14 +14,13 @@ extension UIViewController {
     func setNavigationBarItem(isSidemenuEnabled:Bool) {
         OFAUtils.lockOrientation(.portrait)
         
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "NavigationBG"), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent=false
-        self.navigationController?.view.backgroundColor = OFAUtils.getColorFromHexString(barTintColor)
-        self.navigationController?.navigationBar.tintColor = OFAUtils.getColorFromHexString(barTintColor)
+        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "clear")
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.tintColor = UIColor.white//OFAUtils.getColorFromHexString(barTintColor)
         
-//        self.navigationController?.navigationBar.tintColor = OFAUtils.getColorFromHexString(barTintColor)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:OFAUtils.getColorFromHexString(barTintColor)]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]//OFAUtils.getColorFromHexString(barTintColor)]
         self.navigationController?.navigationBar.barTintColor = UIColor.white//OFAUtils.getColorFromHexString(barTintColor)
         if isSidemenuEnabled{
             self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)

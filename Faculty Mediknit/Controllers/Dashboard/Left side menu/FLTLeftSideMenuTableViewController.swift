@@ -24,7 +24,7 @@ class FLTLeftSideMenuTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LeftSideMenuCell", for: indexPath)
 
-        cell.textLabel?.text = "Option \(indexPath.row+1)"
+        cell.textLabel?.text = "Menu \(indexPath.row+1)"
 
         return cell
     }
