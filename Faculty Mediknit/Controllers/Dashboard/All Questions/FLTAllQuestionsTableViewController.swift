@@ -53,6 +53,7 @@ class FLTAllQuestionsTableViewController: UITableViewController,popUpDelegate {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AllQuestionsCell", for: indexPath) as! FLTAllQuestionsTableViewCell
+        cell.buttonOption.tag = indexPath.row
         if self.selectedSegmentIndex == 0{
             cell.customizeCellWithDetails(question: "Sample Question \(indexPath.row + 1)", name: "Sample name \(100 / (indexPath.row+1))", duration: "5 days ago")
         }else{
@@ -82,6 +83,33 @@ class FLTAllQuestionsTableViewController: UITableViewController,popUpDelegate {
     }
     
     //MARK:- Button Actions
+    
+    @IBAction func optionPressed(_ sender: UIButton) {
+        let cell = self.tableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as! FLTAllQuestionsTableViewCell
+        let optionAction = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let reportAction = UIAlertAction(title: "Report", style: .default) { (action) in
+            
+        }
+        let addToFAQAction = UIAlertAction(title: "Add to FAQ", style: .default) { (action) in
+            
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            optionAction.dismiss(animated: true, completion: nil)
+        }
+        optionAction.addAction(reportAction)
+        optionAction.addAction(addToFAQAction)
+        optionAction.addAction(cancelAction)
+        
+        optionAction.view.tintColor = OFAUtils.getColorFromHexString(barTintColor)
+        
+        self.present(optionAction, animated: true, completion: nil)
+        
+        if !OFAUtils.isiPhone(){
+            let popOVer = optionAction.popoverPresentationController
+            popOVer?.sourceRect = cell.buttonOption.bounds
+            popOVer?.sourceView = cell.buttonOption
+        }
+    }
     
     @IBAction func sortActionPressed(_ sender: UIButton) {
         self.popUpView.delegate = self

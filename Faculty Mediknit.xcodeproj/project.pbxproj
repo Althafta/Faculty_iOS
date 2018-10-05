@@ -24,6 +24,8 @@
 		CE681A49216499CF00B6BCF4 /* FLTPopupHelperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE681A48216499CF00B6BCF4 /* FLTPopupHelperTableViewCell.swift */; };
 		CEDBABC1215CFF8B003396E6 /* FLTAddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBABC0215CFF8B003396E6 /* FLTAddPhotoViewController.swift */; };
 		CEDBABC3215D03EC003396E6 /* FLTAvatarImagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBABC2215D03EC003396E6 /* FLTAvatarImagePreviewViewController.swift */; };
+		CEF5042821661DC1006CDC5F /* FLTQuestionDetailsRepliesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF5042721661DC1006CDC5F /* FLTQuestionDetailsRepliesTableViewCell.swift */; };
+		CEF5042A21661E0D006CDC5F /* FLTRepliesDetailsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF5042921661E0D006CDC5F /* FLTRepliesDetailsListTableViewCell.swift */; };
 		CEF7E124215CA4AD001C8EA7 /* OFAUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7E123215CA4AD001C8EA7 /* OFAUtils.swift */; };
 		CEF7E126215CA4B1001C8EA7 /* SwiftLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7E125215CA4B1001C8EA7 /* SwiftLoader.swift */; };
 		CEF7E128215CA4B4001C8EA7 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7E127215CA4B4001C8EA7 /* Toast.swift */; };
@@ -150,6 +152,8 @@
 		CE681A48216499CF00B6BCF4 /* FLTPopupHelperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTPopupHelperTableViewCell.swift; sourceTree = "<group>"; };
 		CEDBABC0215CFF8B003396E6 /* FLTAddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTAddPhotoViewController.swift; sourceTree = "<group>"; };
 		CEDBABC2215D03EC003396E6 /* FLTAvatarImagePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTAvatarImagePreviewViewController.swift; sourceTree = "<group>"; };
+		CEF5042721661DC1006CDC5F /* FLTQuestionDetailsRepliesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTQuestionDetailsRepliesTableViewCell.swift; sourceTree = "<group>"; };
+		CEF5042921661E0D006CDC5F /* FLTRepliesDetailsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTRepliesDetailsListTableViewCell.swift; sourceTree = "<group>"; };
 		CEF7E123215CA4AD001C8EA7 /* OFAUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OFAUtils.swift; sourceTree = "<group>"; };
 		CEF7E125215CA4B1001C8EA7 /* SwiftLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftLoader.swift; sourceTree = "<group>"; };
 		CEF7E127215CA4B4001C8EA7 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
@@ -674,6 +678,8 @@
 			isa = PBXGroup;
 			children = (
 				CEFD4C27215E3A2800DE3FFB /* FLTAllQuestionsTableViewCell.swift */,
+				CEF5042721661DC1006CDC5F /* FLTQuestionDetailsRepliesTableViewCell.swift */,
+				CEF5042921661E0D006CDC5F /* FLTRepliesDetailsListTableViewCell.swift */,
 			);
 			path = "All Questions";
 			sourceTree = "<group>";
@@ -902,6 +908,7 @@
 				CEF7E128215CA4B4001C8EA7 /* Toast.swift in Sources */,
 				CEF7E15E215CA677001C8EA7 /* SDWebImageDownloaderOperation.m in Sources */,
 				CE602F1B215E12CE005D8E7F /* FLTDashboardViewController.swift in Sources */,
+				CEF5042A21661E0D006CDC5F /* FLTRepliesDetailsListTableViewCell.swift in Sources */,
 				CEFD4C28215E3A2800DE3FFB /* FLTAllQuestionsTableViewCell.swift in Sources */,
 				CE681A49216499CF00B6BCF4 /* FLTPopupHelperTableViewCell.swift in Sources */,
 				CEF7E130215CA63F001C8EA7 /* Reachability.m in Sources */,
@@ -925,6 +932,7 @@
 				CE33B6762161E55B009CA5D6 /* FLTQuestionDetailsTableViewController.swift in Sources */,
 				CE602F11215DECC3005D8E7F /* FLTProfileInfoTableViewController.swift in Sources */,
 				CEF7E165215CA677001C8EA7 /* SDWebImageDownloader.m in Sources */,
+				CEF5042821661DC1006CDC5F /* FLTQuestionDetailsRepliesTableViewCell.swift in Sources */,
 				CE681A452164937800B6BCF4 /* FLTPopUpView.swift in Sources */,
 				CEDBABC3215D03EC003396E6 /* FLTAvatarImagePreviewViewController.swift in Sources */,
 				CEF7E162215CA677001C8EA7 /* MKAnnotationView+WebCache.m in Sources */,

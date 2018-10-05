@@ -14,6 +14,7 @@ class FLTAllQuestionsTableViewCell: UITableViewCell {
     @IBOutlet weak var imageViewAuthor: UIImageView!
     @IBOutlet weak var labelAuthorName: UILabel!
     @IBOutlet weak var labelDuration: UILabel!
+    @IBOutlet weak var buttonOption: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
