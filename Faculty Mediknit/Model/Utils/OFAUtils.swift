@@ -303,6 +303,13 @@ class OFAUtils: NSObject {
         let winDow = appDelegate.window?.rootViewController
         winDow?.view.makeToast(title, duration: 2, position: ToastPosition.bottom)
     }
+    
+    class func showSnackbarWith(message:String,actionTitle:String,action: @escaping () -> Void){
+        let snackbar = Snackbar()
+        snackbar.createWithAction(text: message, actionTitle: actionTitle, action: action)
+        snackbar.show()
+    }
+    
     class func getResizedImagefromImage(_ image:UIImage?,scaledToSize newSize:CGSize) -> UIImage{
         UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
         image?.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))

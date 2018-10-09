@@ -62,7 +62,9 @@ class FLTQuestionDetailsRepliesTableViewController: UITableViewController,UIText
     
     //MARK:- TextView Delegates
     @IBAction func attachmentPressed(_ sender: UIButton) {
-        
+        let addAttachment = self.storyboard?.instantiateViewController(withIdentifier: "AddAttachmentTVC") as! FLTAddAttachmentTableViewController
+        self.navigationItem.title = ""
+        self.navigationController?.pushViewController(addAttachment, animated: true)
     }
     
     @IBAction func postReplyPressed(_ sender: UIButton) {
@@ -85,10 +87,11 @@ class FLTQuestionDetailsRepliesTableViewController: UITableViewController,UIText
             self.textViewReply.text = "Type your reply"
         }
         self.buttonPost.titleLabel?.textColor = .black
+        self.tableView.scrollRectToVisible(self.footerView.frame, animated: true)
     }
 
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        self.buttonPost.titleLabel?.textColor = .blue
+        self.buttonPost.titleLabel?.textColor = OFAUtils.getColorFromHexString(buttonBackgroundColor)
         return true
     }
 }

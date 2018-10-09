@@ -20,7 +20,7 @@ let ArrayRecentSearches="Recent_Searches"
 
 let orderAcceptColorCode = "0ca500"
 
-let buttonBackgroundColor = "A9B8DE"
+let buttonBackgroundColor = "007AFF"
 
 let backgroundColor = "E3E9ED"
 

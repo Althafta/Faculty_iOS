@@ -28,4 +28,10 @@ class FLTLeftSideMenuTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        OFAUtils.showSnackbarWith(message: "Sample snackbar", actionTitle: "Show") {
+            OFAUtils.showToastWithTitle("Showing toast")
+        }
+    }
 }
