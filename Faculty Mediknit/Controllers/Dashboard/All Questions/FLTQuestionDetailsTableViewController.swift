@@ -29,6 +29,7 @@ class FLTQuestionDetailsTableViewController: UITableViewController {
     
     var isCollpased = false
     var isReplied = false
+    
     //MARK:- Life Cycles
     
     override func viewDidLoad() {
@@ -74,7 +75,9 @@ class FLTQuestionDetailsTableViewController: UITableViewController {
     //MARK:- Button Actions
     
     @IBAction func replyPressed(_ sender: UIButton) {
-        
+        let replyDetails = self.storyboard?.instantiateViewController(withIdentifier: "QuestionDetailsReplyTVC") as! FLTQuestionDetailsRepliesTableViewController
+        self.navigationItem.title = ""
+        self.navigationController?.pushViewController(replyDetails, animated: true)
     }
     
     @IBAction func collpaseAction(_ sender: UIButton) {

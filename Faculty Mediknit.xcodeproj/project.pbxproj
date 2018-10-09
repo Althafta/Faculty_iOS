@@ -20,6 +20,7 @@
 		CE63B1CF215C99CF00B02075 /* Faculty_Mediknit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE63B1CD215C99CF00B02075 /* Faculty_Mediknit.xcdatamodeld */; };
 		CE63B1D1215C99D000B02075 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE63B1D0215C99D000B02075 /* Assets.xcassets */; };
 		CE63B1D4215C99D000B02075 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE63B1D2215C99D000B02075 /* LaunchScreen.storyboard */; };
+		CE651ADC216C7959005E5A0E /* FLTQuestionDetailsRepliesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE651ADB216C7959005E5A0E /* FLTQuestionDetailsRepliesTableViewController.swift */; };
 		CE681A452164937800B6BCF4 /* FLTPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE681A442164937800B6BCF4 /* FLTPopUpView.swift */; };
 		CE681A49216499CF00B6BCF4 /* FLTPopupHelperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE681A48216499CF00B6BCF4 /* FLTPopupHelperTableViewCell.swift */; };
 		CEDBABC1215CFF8B003396E6 /* FLTAddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBABC0215CFF8B003396E6 /* FLTAddPhotoViewController.swift */; };
@@ -148,6 +149,7 @@
 		CE63B1D0215C99D000B02075 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE63B1D3215C99D000B02075 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE63B1D5215C99D000B02075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE651ADB216C7959005E5A0E /* FLTQuestionDetailsRepliesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTQuestionDetailsRepliesTableViewController.swift; sourceTree = "<group>"; };
 		CE681A442164937800B6BCF4 /* FLTPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTPopUpView.swift; sourceTree = "<group>"; };
 		CE681A48216499CF00B6BCF4 /* FLTPopupHelperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTPopupHelperTableViewCell.swift; sourceTree = "<group>"; };
 		CEDBABC0215CFF8B003396E6 /* FLTAddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTAddPhotoViewController.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 			children = (
 				CE602F15215E09A7005D8E7F /* FLTAllQuestionsTableViewController.swift */,
 				CE33B6752161E55B009CA5D6 /* FLTQuestionDetailsTableViewController.swift */,
+				CE651ADB216C7959005E5A0E /* FLTQuestionDetailsRepliesTableViewController.swift */,
 			);
 			path = "All Questions";
 			sourceTree = "<group>";
@@ -918,6 +921,7 @@
 				CEDBABC1215CFF8B003396E6 /* FLTAddPhotoViewController.swift in Sources */,
 				CEF7E126215CA4B1001C8EA7 /* SwiftLoader.swift in Sources */,
 				CEF7E159215CA677001C8EA7 /* UIView+WebCacheOperation.m in Sources */,
+				CE651ADC216C7959005E5A0E /* FLTQuestionDetailsRepliesTableViewController.swift in Sources */,
 				CE63B1CF215C99CF00B02075 /* Faculty_Mediknit.xcdatamodeld in Sources */,
 				CE602F18215E0B2E005D8E7F /* UIViewControllerExtension.swift in Sources */,
 				CEF7E211215CC838001C8EA7 /* FLTForgotPasswordTableViewController.swift in Sources */,
