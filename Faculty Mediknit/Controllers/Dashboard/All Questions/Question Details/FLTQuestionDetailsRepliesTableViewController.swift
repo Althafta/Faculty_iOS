@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FLTQuestionDetailsRepliesTableViewController: UITableViewController,UITextViewDelegate {
+class FLTQuestionDetailsRepliesTableViewController: UITableViewController,UITextViewDelegate,ImageOnlyDelegate,ImageAndTextDelegate {
 
     @IBOutlet var footerView: UIView!
     @IBOutlet weak var textViewReply: UITextView!
@@ -41,15 +41,49 @@ class FLTQuestionDetailsRepliesTableViewController: UITableViewController,UIText
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //create different cell classes and populate each with relevant data
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "repliesWithImageAndTextCell", for: indexPath)
-        return cell
+        if indexPath.row == 0{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "repliesWithImageAndTextCell", for: indexPath) as! FLTReplyWithImageAndTextTableViewCell
+            cell.buttonImage.tag = indexPath.row
+            cell.buttonOption.tag = indexPath.row
+            cell.delegate = self
+            return cell
+        }else if indexPath.row == 2{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "repliesWithImageCell", for: indexPath) as! FLTReplyWithImageOnlyTableViewCell
+            cell.buttonOption.tag = indexPath.row
+            cell.buttonImage.tag = indexPath.row
+            cell.delegate = self
+            return cell
+        }else if indexPath.row == 1{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "repliesWithTextCell", for: indexPath) as! FLTReplyWithTextOnlyTableViewCell
+            cell.buttonOption.tag = indexPath.row
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "repliesWithImageAndTextCell", for: indexPath) as! FLTReplyWithImageAndTextTableViewCell
+            cell.buttonImage.tag = indexPath.row
+            cell.buttonOption.tag = indexPath.row
+            cell.delegate = self
+            return cell
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        self.tableView.estimatedRowHeight = 200
-        self.tableView.rowHeight = UITableView.automaticDimension
-        return self.tableView.rowHeight
+        if indexPath.row == 0{
+            self.tableView.estimatedRowHeight = 200
+            self.tableView.rowHeight = UITableView.automaticDimension
+            return self.tableView.rowHeight
+        }else if indexPath.row == 1{
+            self.tableView.estimatedRowHeight = 123
+            self.tableView.rowHeight = UITableView.automaticDimension
+            return self.tableView.rowHeight
+        }else if indexPath.row == 2{
+            self.tableView.estimatedRowHeight = 150
+            self.tableView.rowHeight = UITableView.automaticDimension
+            return self.tableView.rowHeight
+        }else{
+            self.tableView.estimatedRowHeight = 200
+            self.tableView.rowHeight = UITableView.automaticDimension
+            return self.tableView.rowHeight
+        }
     }
     
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -75,6 +109,8 @@ class FLTQuestionDetailsRepliesTableViewController: UITableViewController,UIText
         
     }
     
+    //MARK:- UITextview Delegate
+    
     func textViewDidBeginEditing(_ textView: UITextView) {
         self.tableView.scrollRectToVisible(self.footerView.frame, animated: true)
         if self.textViewReply.text == "Type your reply"{
@@ -93,5 +129,21 @@ class FLTQuestionDetailsRepliesTableViewController: UITableViewController,UIText
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         self.buttonPost.titleLabel?.textColor = OFAUtils.getColorFromHexString(buttonBackgroundColor)
         return true
+    }
+    
+    //MARK:- Cell Delegates
+    
+    func getImageData(imageURL: String) {
+        let imagePreview = self.storyboard?.instantiateViewController(withIdentifier: "AttachmentPreviewVC") as! FLTAttachmentPreviewViewController
+        self.navigationItem.title = ""
+        imagePreview.imageURLString = imageURL
+        self.navigationController?.pushViewController(imagePreview, animated: true)
+    }
+    
+    func getImageAndTextData(imageURL: String, caption: String) {
+        let imagePreview = self.storyboard?.instantiateViewController(withIdentifier: "AttachmentPreviewVC") as! FLTAttachmentPreviewViewController
+        self.navigationItem.title = ""
+        imagePreview.imageURLString = imageURL
+        self.navigationController?.pushViewController(imagePreview, animated: true)
     }
 }

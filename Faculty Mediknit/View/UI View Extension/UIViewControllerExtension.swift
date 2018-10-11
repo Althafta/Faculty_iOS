@@ -14,9 +14,8 @@ extension UIViewController {
     func setNavigationBarItem(isSidemenuEnabled:Bool) {
         OFAUtils.lockOrientation(.portrait)
         
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "NavigationBG"), for: .default)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "AppBG"), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "clear")
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.tintColor = UIColor.white//OFAUtils.getColorFromHexString(barTintColor)
         

@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		64F696D32DDE18691CDFE6C0 /* Pods_Faculty_Mediknit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E777DC1C9CCA4CC5621BF372 /* Pods_Faculty_Mediknit.framework */; };
+		CE1D5B65216DD0F600D4B9DF /* FLTAttachmentPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D5B64216DD0F600D4B9DF /* FLTAttachmentPreviewViewController.swift */; };
 		CE33B6762161E55B009CA5D6 /* FLTQuestionDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33B6752161E55B009CA5D6 /* FLTQuestionDetailsTableViewController.swift */; };
 		CE33B6782161F821009CA5D6 /* TabySegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33B6772161F821009CA5D6 /* TabySegmentedControl.swift */; };
+		CE4FF009216F183000B49E2E /* FLTLeftMenuContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FF008216F183000B49E2E /* FLTLeftMenuContainerViewController.swift */; };
+		CE4FF00B216F75BA00B49E2E /* FLTReplyWithImageAndTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FF00A216F75BA00B49E2E /* FLTReplyWithImageAndTextTableViewCell.swift */; };
+		CE4FF00D216F75C900B49E2E /* FLTReplyWithImageOnlyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FF00C216F75C900B49E2E /* FLTReplyWithImageOnlyTableViewCell.swift */; };
+		CE4FF00F216F75D600B49E2E /* FLTReplyWithTextOnlyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FF00E216F75D600B49E2E /* FLTReplyWithTextOnlyTableViewCell.swift */; };
 		CE602F11215DECC3005D8E7F /* FLTProfileInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE602F10215DECC3005D8E7F /* FLTProfileInfoTableViewController.swift */; };
 		CE602F14215E0938005D8E7F /* FLTLeftSideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE602F13215E0938005D8E7F /* FLTLeftSideMenuTableViewController.swift */; };
 		CE602F16215E09A7005D8E7F /* FLTAllQuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE602F15215E09A7005D8E7F /* FLTAllQuestionsTableViewController.swift */; };
@@ -27,8 +32,6 @@
 		CE681A49216499CF00B6BCF4 /* FLTPopupHelperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE681A48216499CF00B6BCF4 /* FLTPopupHelperTableViewCell.swift */; };
 		CEDBABC1215CFF8B003396E6 /* FLTAddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBABC0215CFF8B003396E6 /* FLTAddPhotoViewController.swift */; };
 		CEDBABC3215D03EC003396E6 /* FLTAvatarImagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBABC2215D03EC003396E6 /* FLTAvatarImagePreviewViewController.swift */; };
-		CEF5042821661DC1006CDC5F /* FLTQuestionDetailsRepliesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF5042721661DC1006CDC5F /* FLTQuestionDetailsRepliesTableViewCell.swift */; };
-		CEF5042A21661E0D006CDC5F /* FLTRepliesDetailsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF5042921661E0D006CDC5F /* FLTRepliesDetailsListTableViewCell.swift */; };
 		CEF7E124215CA4AD001C8EA7 /* OFAUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7E123215CA4AD001C8EA7 /* OFAUtils.swift */; };
 		CEF7E126215CA4B1001C8EA7 /* SwiftLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7E125215CA4B1001C8EA7 /* SwiftLoader.swift */; };
 		CEF7E128215CA4B4001C8EA7 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7E127215CA4B4001C8EA7 /* Toast.swift */; };
@@ -137,8 +140,13 @@
 /* Begin PBXFileReference section */
 		7FFA5B6AF802B14DCF784D09 /* Pods-Faculty Mediknit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faculty Mediknit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Faculty Mediknit/Pods-Faculty Mediknit.debug.xcconfig"; sourceTree = "<group>"; };
 		9E07DF6C5EE9DDB7B60A5C93 /* Pods-Faculty Mediknit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faculty Mediknit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Faculty Mediknit/Pods-Faculty Mediknit.release.xcconfig"; sourceTree = "<group>"; };
+		CE1D5B64216DD0F600D4B9DF /* FLTAttachmentPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTAttachmentPreviewViewController.swift; sourceTree = "<group>"; };
 		CE33B6752161E55B009CA5D6 /* FLTQuestionDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTQuestionDetailsTableViewController.swift; sourceTree = "<group>"; };
 		CE33B6772161F821009CA5D6 /* TabySegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabySegmentedControl.swift; sourceTree = "<group>"; };
+		CE4FF008216F183000B49E2E /* FLTLeftMenuContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTLeftMenuContainerViewController.swift; sourceTree = "<group>"; };
+		CE4FF00A216F75BA00B49E2E /* FLTReplyWithImageAndTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTReplyWithImageAndTextTableViewCell.swift; sourceTree = "<group>"; };
+		CE4FF00C216F75C900B49E2E /* FLTReplyWithImageOnlyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTReplyWithImageOnlyTableViewCell.swift; sourceTree = "<group>"; };
+		CE4FF00E216F75D600B49E2E /* FLTReplyWithTextOnlyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTReplyWithTextOnlyTableViewCell.swift; sourceTree = "<group>"; };
 		CE602F10215DECC3005D8E7F /* FLTProfileInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTProfileInfoTableViewController.swift; sourceTree = "<group>"; };
 		CE602F13215E0938005D8E7F /* FLTLeftSideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTLeftSideMenuTableViewController.swift; sourceTree = "<group>"; };
 		CE602F15215E09A7005D8E7F /* FLTAllQuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTAllQuestionsTableViewController.swift; sourceTree = "<group>"; };
@@ -158,8 +166,6 @@
 		CE681A48216499CF00B6BCF4 /* FLTPopupHelperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTPopupHelperTableViewCell.swift; sourceTree = "<group>"; };
 		CEDBABC0215CFF8B003396E6 /* FLTAddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTAddPhotoViewController.swift; sourceTree = "<group>"; };
 		CEDBABC2215D03EC003396E6 /* FLTAvatarImagePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTAvatarImagePreviewViewController.swift; sourceTree = "<group>"; };
-		CEF5042721661DC1006CDC5F /* FLTQuestionDetailsRepliesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTQuestionDetailsRepliesTableViewCell.swift; sourceTree = "<group>"; };
-		CEF5042921661E0D006CDC5F /* FLTRepliesDetailsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTRepliesDetailsListTableViewCell.swift; sourceTree = "<group>"; };
 		CEF7E123215CA4AD001C8EA7 /* OFAUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OFAUtils.swift; sourceTree = "<group>"; };
 		CEF7E125215CA4B1001C8EA7 /* SwiftLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftLoader.swift; sourceTree = "<group>"; };
 		CEF7E127215CA4B4001C8EA7 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
@@ -337,6 +343,16 @@
 			path = "SegmentControl Helper Classes";
 			sourceTree = "<group>";
 		};
+		CE4FF010216F75DB00B49E2E /* Reply Types */ = {
+			isa = PBXGroup;
+			children = (
+				CE4FF00A216F75BA00B49E2E /* FLTReplyWithImageAndTextTableViewCell.swift */,
+				CE4FF00C216F75C900B49E2E /* FLTReplyWithImageOnlyTableViewCell.swift */,
+				CE4FF00E216F75D600B49E2E /* FLTReplyWithTextOnlyTableViewCell.swift */,
+			);
+			path = "Reply Types";
+			sourceTree = "<group>";
+		};
 		CE602F0F215DEBFF005D8E7F /* Avatar */ = {
 			isa = PBXGroup;
 			children = (
@@ -446,6 +462,7 @@
 			isa = PBXGroup;
 			children = (
 				CE651ADF216CC608005E5A0E /* FLTAddAttachmentTableViewController.swift */,
+				CE1D5B64216DD0F600D4B9DF /* FLTAttachmentPreviewViewController.swift */,
 			);
 			path = "Add Attachments";
 			sourceTree = "<group>";
@@ -678,6 +695,7 @@
 			isa = PBXGroup;
 			children = (
 				CE602F13215E0938005D8E7F /* FLTLeftSideMenuTableViewController.swift */,
+				CE4FF008216F183000B49E2E /* FLTLeftMenuContainerViewController.swift */,
 			);
 			path = "Left side menu";
 			sourceTree = "<group>";
@@ -703,8 +721,7 @@
 			isa = PBXGroup;
 			children = (
 				CEFD4C27215E3A2800DE3FFB /* FLTAllQuestionsTableViewCell.swift */,
-				CEF5042721661DC1006CDC5F /* FLTQuestionDetailsRepliesTableViewCell.swift */,
-				CEF5042921661E0D006CDC5F /* FLTRepliesDetailsListTableViewCell.swift */,
+				CE4FF010216F75DB00B49E2E /* Reply Types */,
 			);
 			path = "All Questions";
 			sourceTree = "<group>";
@@ -927,19 +944,21 @@
 				CEF7E124215CA4AD001C8EA7 /* OFAUtils.swift in Sources */,
 				CEF7E20F215CC823001C8EA7 /* FLTLoginTableViewController.swift in Sources */,
 				CEF7E166215CA677001C8EA7 /* NSImage+WebCache.m in Sources */,
+				CE4FF009216F183000B49E2E /* FLTLeftMenuContainerViewController.swift in Sources */,
 				CEF7E167215CA677001C8EA7 /* SDWebImageDecoder.m in Sources */,
+				CE1D5B65216DD0F600D4B9DF /* FLTAttachmentPreviewViewController.swift in Sources */,
 				CE602F14215E0938005D8E7F /* FLTLeftSideMenuTableViewController.swift in Sources */,
 				CEF7E160215CA677001C8EA7 /* UIImage+WebP.m in Sources */,
 				CEF7E128215CA4B4001C8EA7 /* Toast.swift in Sources */,
 				CEF7E15E215CA677001C8EA7 /* SDWebImageDownloaderOperation.m in Sources */,
 				CE602F1B215E12CE005D8E7F /* FLTDashboardViewController.swift in Sources */,
-				CEF5042A21661E0D006CDC5F /* FLTRepliesDetailsListTableViewCell.swift in Sources */,
 				CEFD4C28215E3A2800DE3FFB /* FLTAllQuestionsTableViewCell.swift in Sources */,
 				CE681A49216499CF00B6BCF4 /* FLTPopupHelperTableViewCell.swift in Sources */,
 				CEF7E130215CA63F001C8EA7 /* Reachability.m in Sources */,
 				CEF7E161215CA677001C8EA7 /* SDWebImagePrefetcher.m in Sources */,
 				CEF7E12A215CA4BC001C8EA7 /* OFAConstants.swift in Sources */,
 				CE63B1C7215C99CF00B02075 /* AppDelegate.swift in Sources */,
+				CE4FF00B216F75BA00B49E2E /* FLTReplyWithImageAndTextTableViewCell.swift in Sources */,
 				CEDBABC1215CFF8B003396E6 /* FLTAddPhotoViewController.swift in Sources */,
 				CEF7E126215CA4B1001C8EA7 /* SwiftLoader.swift in Sources */,
 				CEF7E159215CA677001C8EA7 /* UIView+WebCacheOperation.m in Sources */,
@@ -947,6 +966,7 @@
 				CE651AE0216CC608005E5A0E /* FLTAddAttachmentTableViewController.swift in Sources */,
 				CE63B1CF215C99CF00B02075 /* Faculty_Mediknit.xcdatamodeld in Sources */,
 				CE651ADE216CC24B005E5A0E /* Snackbar.swift in Sources */,
+				CE4FF00F216F75D600B49E2E /* FLTReplyWithTextOnlyTableViewCell.swift in Sources */,
 				CE602F18215E0B2E005D8E7F /* UIViewControllerExtension.swift in Sources */,
 				CEF7E211215CC838001C8EA7 /* FLTForgotPasswordTableViewController.swift in Sources */,
 				CEF7E15F215CA677001C8EA7 /* SDWebImageManager.m in Sources */,
@@ -960,10 +980,10 @@
 				CE33B6762161E55B009CA5D6 /* FLTQuestionDetailsTableViewController.swift in Sources */,
 				CE602F11215DECC3005D8E7F /* FLTProfileInfoTableViewController.swift in Sources */,
 				CEF7E165215CA677001C8EA7 /* SDWebImageDownloader.m in Sources */,
-				CEF5042821661DC1006CDC5F /* FLTQuestionDetailsRepliesTableViewCell.swift in Sources */,
 				CE681A452164937800B6BCF4 /* FLTPopUpView.swift in Sources */,
 				CEDBABC3215D03EC003396E6 /* FLTAvatarImagePreviewViewController.swift in Sources */,
 				CEF7E162215CA677001C8EA7 /* MKAnnotationView+WebCache.m in Sources */,
+				CE4FF00D216F75C900B49E2E /* FLTReplyWithImageOnlyTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func initializeDashboard(){
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let leftMenuVC: FLTLeftSideMenuTableViewController = mainStoryboard.instantiateViewController(withIdentifier: "LeftSideMenuTVC") as! FLTLeftSideMenuTableViewController
+        let leftMenuVC: FLTLeftMenuContainerViewController = mainStoryboard.instantiateViewController(withIdentifier: "LeftMenuContainerVC") as! FLTLeftMenuContainerViewController
         let centerVC = mainStoryboard.instantiateViewController(withIdentifier: "DashboardTabVC") as! FLTDashboardViewController
         let centerNavVC = UINavigationController(rootViewController: centerVC)
         
@@ -36,6 +36,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         rootController.leftPanelPosition = .front
         
         self.window?.rootViewController = rootController
+        self.window?.makeKeyAndVisible()
+    }
+    
+    func logout(){
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let loginNav = storyBoard.instantiateViewController(withIdentifier: "LoginNVC")
+        self.window?.rootViewController = loginNav
         self.window?.makeKeyAndVisible()
     }
     

@@ -10,21 +10,23 @@ import UIKit
 
 class FLTLeftSideMenuTableViewController: UITableViewController {
 
+    var arrayMenu = ["Answer later","App settings","Contact help","About"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        panel!.configs.leftPanelWidth = self.view.frame.width - self.view.frame.width/5
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.arrayMenu.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LeftSideMenuCell", for: indexPath)
 
-        cell.textLabel?.text = "Menu \(indexPath.row+1)"
+        cell.textLabel?.font = UIFont(name: "NotoSans-Regular", size: 17.0)
+        cell.textLabel?.text = self.arrayMenu[indexPath.row]
 
         return cell
     }
@@ -33,5 +35,9 @@ class FLTLeftSideMenuTableViewController: UITableViewController {
         OFAUtils.showSnackbarWith(message: "Sample snackbar", actionTitle: "Show") {
             OFAUtils.showToastWithTitle("Showing toast")
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
     }
 }
