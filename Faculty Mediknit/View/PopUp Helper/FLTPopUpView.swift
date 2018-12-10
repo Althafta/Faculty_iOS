@@ -9,7 +9,7 @@
 import UIKit
 
 protocol popUpDelegate {
-    func getSelectedItems(item:String,index:Int)
+    func getSelectedItems(item:String,index:Int,type:String)
 }
 
 class FLTPopUpView: UIView,UITableViewDelegate,UITableViewDataSource {
@@ -19,6 +19,7 @@ class FLTPopUpView: UIView,UITableViewDelegate,UITableViewDataSource {
     var arrayListItems = [String]()
     var delegate:popUpDelegate!
     var selectedIndex = Int()
+    var type = ""
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.arrayListItems.count
@@ -42,6 +43,6 @@ class FLTPopUpView: UIView,UITableViewDelegate,UITableViewDataSource {
     
     @IBAction func buttonOptionPressed(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
-        self.delegate.getSelectedItems(item: self.arrayListItems[sender.tag], index: sender.tag)
+        self.delegate.getSelectedItems(item: self.arrayListItems[sender.tag], index: sender.tag, type: self.type)
     }
 }

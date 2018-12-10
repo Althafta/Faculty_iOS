@@ -11,9 +11,11 @@ import UIKit
 class FLTLeftMenuContainerViewController: UIViewController {
 
     @IBOutlet weak var buttonLogout: UIButton!
+    @IBOutlet weak var labelVersion: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.labelVersion.text = "Version " + (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as AnyObject as! String)
         panel!.configs.leftPanelWidth = self.view.frame.width - self.view.frame.width/5
     }
     

@@ -466,7 +466,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NavigationBG" translatesAutoresizingMaskIntoConstraints="NO" id="TI8-vs-fyh">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="185"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mediknit Faculty" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1I1-9E-LPu">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MEDIKNIT FACULTY" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1I1-9E-LPu">
                                         <rect key="frame" x="25" y="40" width="118" height="63"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="63" id="dvV-QA-Sja"/>
@@ -477,7 +477,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3h-fw-mFT">
-                                        <rect key="frame" x="25" y="128" width="37" height="26"/>
+                                        <rect key="frame" x="25" y="128" width="38" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="wHx-bD-6ev"/>
                                         </constraints>
@@ -517,6 +517,7 @@
                     </view>
                     <connections>
                         <outlet property="buttonLogout" destination="34X-Gy-FLR" id="LP3-cH-RDu"/>
+                        <outlet property="labelVersion" destination="b3h-fw-mFT" id="sft-wi-pbN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6sc-bd-dLO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -804,15 +805,16 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="232"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dB3-q8-bCc">
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dB3-q8-bCc">
                             <rect key="frame" x="0.0" y="41" width="375" height="146"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="separatorColor" red="0.24052932860000001" green="0.71346527339999999" blue="0.96319597960000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <prototypes>
                                 <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="popUpListCell" id="ggN-nA-E0U" customClass="FLTPopupHelperTableViewCell" customModule="Faculty_Mediknit" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ggN-nA-E0U" id="uaH-4b-2cD">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGZ-5y-Mdi">
@@ -846,7 +848,7 @@
                             </connections>
                         </tableView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMM-Fi-eIh">
-                            <rect key="frame" x="16" y="0.0" width="42" height="41"/>
+                            <rect key="frame" x="16" y="0.0" width="43" height="41"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="41" id="LEk-11-1S4"/>
                             </constraints>

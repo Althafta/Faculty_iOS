@@ -20,6 +20,7 @@ class FLTAllQuestionsTableViewController: UITableViewController,popUpDelegate {
     @IBOutlet var popUpView: FLTPopUpView!
     
     var arraySortList = ["Over due first","Newest first","Answer later first"]
+    var arrayReportList = ["Spam","Incomplete","Incorrect topic","Others"]
     
     var blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
     var blurEffectView = UIVisualEffectView()
@@ -89,16 +90,30 @@ class FLTAllQuestionsTableViewController: UITableViewController,popUpDelegate {
         let optionAction = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let reportAction = UIAlertAction(title: "Report", style: .default) { (action) in
-            
+            self.popUpView.delegate = self
+            self.popUpView.labelPopUpHeading.text = "Choose a reason for reporting"
+            self.popUpView.arrayListItems = self.arrayReportList
+            self.popUpView.selectedIndex = 0
+            self.popUpView.type = "report"
+            self.popUpView.tableViewList.reloadData()
+            self.showPopUp()
+            self.blur()
+            self.animateIn()
         }
         let addToFAQAction = UIAlertAction(title: "Add to FAQ", style: .default) { (action) in
-            
+            OFAUtils.showSnackbarWith(message: "Added to FAQ", actionTitle: "Undo", action: {
+                //undo add to FAQ
+            })
         }
         let ignoreAction = UIAlertAction(title: "Ignore", style: .default) { (action) in
-            
+            OFAUtils.showSnackbarWith(message: "Question Ignored", actionTitle: "Undo", action: {
+                //undo ignore
+            })
         }
         let answerLaterAction = UIAlertAction(title: "Answer Later", style: .default) { (action) in
-            
+            OFAUtils.showSnackbarWith(message: "Added to answer later", actionTitle: "Undo", action: {
+                //undo answer later
+            })
         }
         let requestPeerAction = UIAlertAction(title: "Request a peer", style: .default) { (action) in
             
@@ -131,8 +146,10 @@ class FLTAllQuestionsTableViewController: UITableViewController,popUpDelegate {
     
     @IBAction func sortActionPressed(_ sender: UIButton) {
         self.popUpView.delegate = self
+        self.popUpView.labelPopUpHeading.text = self.segmentControlHeader.selectedSegmentIndex == 0 ? "Sort unanswered questions" : "Sort answered questions"
         self.popUpView.arrayListItems = self.arraySortList
         self.popUpView.selectedIndex = self.selectedOrderIndex
+        self.popUpView.type = "sort"
         self.popUpView.tableViewList.reloadData()
         self.showPopUp()
         blur()
@@ -167,10 +184,14 @@ class FLTAllQuestionsTableViewController: UITableViewController,popUpDelegate {
     
     //MARK:- PopUp Delegate
     
-    func getSelectedItems(item: String, index: Int) {
-        self.sortHeading.text = item
-        self.selectedOrderIndex = index
-        ////Call API with new sort order
+    func getSelectedItems(item: String, index: Int, type: String) {
+        if type == "sort"{
+            ////Call API with new sort order
+            self.sortHeading.text = item
+            self.selectedOrderIndex = index
+        }else if type == "report"{
+            
+        }
         removeBlur()
         animateOut()
     }

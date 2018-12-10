@@ -53,7 +53,8 @@ class OFAUtils: NSObject {
     }
     
     class func getUDID()->String{
-        return String(describing: UserDefaults.standard.value(forKey: device_token))
+//        return String(describing: UserDefaults.standard.value(forKey: device_token))
+        return (UIDevice.current.identifierForVendor?.uuidString)!
     }
     class func checkEmailValidation(stringEmail:String)->Bool{
 //        let emailRegEx = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
@@ -306,6 +307,7 @@ class OFAUtils: NSObject {
     
     class func showSnackbarWith(message:String,actionTitle:String,action: @escaping () -> Void){
         let snackbar = Snackbar()
+        snackbar.buttonColor = UIColor.yellow
         snackbar.createWithAction(text: message, actionTitle: actionTitle, action: action)
         snackbar.show()
     }
