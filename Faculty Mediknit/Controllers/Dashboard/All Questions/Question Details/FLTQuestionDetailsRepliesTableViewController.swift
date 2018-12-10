@@ -41,23 +41,23 @@ class FLTQuestionDetailsRepliesTableViewController: UITableViewController,UIText
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //create different cell classes and populate each with relevant data
-        if indexPath.row == 0{
+        if indexPath.row == 0{//indexpath has to be changed to view type.//type=1;repliesWithImageAndText
             let cell = tableView.dequeueReusableCell(withIdentifier: "repliesWithImageAndTextCell", for: indexPath) as! FLTReplyWithImageAndTextTableViewCell
             cell.buttonImage.tag = indexPath.row
             cell.buttonOption.tag = indexPath.row
             cell.delegate = self
             return cell
-        }else if indexPath.row == 2{
+        }else if indexPath.row == 2{//type=2;repliesWithImage
             let cell = tableView.dequeueReusableCell(withIdentifier: "repliesWithImageCell", for: indexPath) as! FLTReplyWithImageOnlyTableViewCell
             cell.buttonOption.tag = indexPath.row
             cell.buttonImage.tag = indexPath.row
             cell.delegate = self
             return cell
-        }else if indexPath.row == 1{
+        }else if indexPath.row == 1{//type=3;repliesWithText
             let cell = tableView.dequeueReusableCell(withIdentifier: "repliesWithTextCell", for: indexPath) as! FLTReplyWithTextOnlyTableViewCell
             cell.buttonOption.tag = indexPath.row
             return cell
-        }else{
+        }else{//type=1;repliesWithImageAndText///default
             let cell = tableView.dequeueReusableCell(withIdentifier: "repliesWithImageAndTextCell", for: indexPath) as! FLTReplyWithImageAndTextTableViewCell
             cell.buttonImage.tag = indexPath.row
             cell.buttonOption.tag = indexPath.row
@@ -67,19 +67,19 @@ class FLTQuestionDetailsRepliesTableViewController: UITableViewController,UIText
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0{
+        if indexPath.row == 0{//type=1;repliesWithImageAndText
             self.tableView.estimatedRowHeight = 200
             self.tableView.rowHeight = UITableView.automaticDimension
             return self.tableView.rowHeight
-        }else if indexPath.row == 1{
+        }else if indexPath.row == 1{//type=2;repliesWithImage
             self.tableView.estimatedRowHeight = 123
             self.tableView.rowHeight = UITableView.automaticDimension
             return self.tableView.rowHeight
-        }else if indexPath.row == 2{
+        }else if indexPath.row == 2{//type=3;repliesWithText
             self.tableView.estimatedRowHeight = 150
             self.tableView.rowHeight = UITableView.automaticDimension
             return self.tableView.rowHeight
-        }else{
+        }else{//type=1;repliesWithImageAndText///default
             self.tableView.estimatedRowHeight = 200
             self.tableView.rowHeight = UITableView.automaticDimension
             return self.tableView.rowHeight
@@ -123,12 +123,18 @@ class FLTQuestionDetailsRepliesTableViewController: UITableViewController,UIText
             self.textViewReply.text = "Type your reply"
         }
         self.buttonPost.titleLabel?.textColor = .black
-        self.tableView.scrollRectToVisible(self.footerView.frame, animated: true)
+        self.tableView.beginUpdates()
+        self.tableView.endUpdates()
+        self.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .bottom, animated: true)
     }
-
+    
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         self.buttonPost.titleLabel?.textColor = OFAUtils.getColorFromHexString(buttonBackgroundColor)
-        return true
+        let maxLength = 50
+        let currentString: NSString = textView.text! as NSString
+        let newString: NSString =
+            currentString.replacingCharacters(in: range, with: text) as NSString
+        return newString.length <= maxLength
     }
     
     //MARK:- Cell Delegates

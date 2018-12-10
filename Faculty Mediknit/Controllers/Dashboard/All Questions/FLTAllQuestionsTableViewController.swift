@@ -87,17 +87,35 @@ class FLTAllQuestionsTableViewController: UITableViewController,popUpDelegate {
     @IBAction func optionPressed(_ sender: UIButton) {
         let cell = self.tableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as! FLTAllQuestionsTableViewCell
         let optionAction = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
         let reportAction = UIAlertAction(title: "Report", style: .default) { (action) in
             
         }
         let addToFAQAction = UIAlertAction(title: "Add to FAQ", style: .default) { (action) in
             
         }
+        let ignoreAction = UIAlertAction(title: "Ignore", style: .default) { (action) in
+            
+        }
+        let answerLaterAction = UIAlertAction(title: "Answer Later", style: .default) { (action) in
+            
+        }
+        let requestPeerAction = UIAlertAction(title: "Request a peer", style: .default) { (action) in
+            
+        }
+       
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
             optionAction.dismiss(animated: true, completion: nil)
         }
-        optionAction.addAction(reportAction)
-        optionAction.addAction(addToFAQAction)
+        if self.segmentControlHeader.selectedSegmentIndex == 0{
+            optionAction.addAction(ignoreAction)
+            optionAction.addAction(answerLaterAction)
+            optionAction.addAction(requestPeerAction)
+            optionAction.addAction(reportAction)
+        }else{
+            optionAction.addAction(reportAction)
+            optionAction.addAction(addToFAQAction)
+        }
         optionAction.addAction(cancelAction)
         
         optionAction.view.tintColor = OFAUtils.getColorFromHexString(barTintColor)

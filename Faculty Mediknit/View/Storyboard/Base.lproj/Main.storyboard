@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dhE-zQ-evr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dhE-zQ-evr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -74,7 +74,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, there! Sign in now with www.mediknit.org credentials" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmZ-8p-WKD">
-                                                    <rect key="frame" x="16" y="8" width="343" height="44"/>
+                                                    <rect key="frame" x="16" y="11.5" width="343" height="37.5"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -95,7 +95,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2h5-W7-dRO" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                                    <rect key="frame" x="20" y="28" width="335" height="24"/>
+                                                    <rect key="frame" x="20" y="30" width="335" height="20"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
@@ -152,7 +152,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Access ID" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZhY-He-2mh" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                                    <rect key="frame" x="20" y="28" width="335" height="24"/>
+                                                    <rect key="frame" x="20" y="30" width="335" height="20"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
@@ -209,7 +209,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZv-su-wqN">
-                                                    <rect key="frame" x="21" y="7" width="182" height="36"/>
+                                                    <rect key="frame" x="21" y="7" width="179" height="36"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                                     <state key="normal" title="Forgot your Access ID?">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -354,7 +354,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwG-Rw-g2F">
-                                <rect key="frame" x="151" y="518" width="73" height="30"/>
+                                <rect key="frame" x="153" y="518" width="69" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="jdt-3P-6lB"/>
                                 </constraints>
@@ -365,7 +365,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rK-gx-00Q">
-                                <rect key="frame" x="130.5" y="452" width="114" height="36"/>
+                                <rect key="frame" x="132.5" y="452" width="110" height="32"/>
                                 <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                 <state key="normal" title="Change Photo"/>
                                 <connections>
@@ -477,7 +477,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3h-fw-mFT">
-                                        <rect key="frame" x="25" y="128" width="38" height="26"/>
+                                        <rect key="frame" x="25" y="128" width="37" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="wHx-bD-6ev"/>
                                         </constraints>
@@ -595,7 +595,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="163"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppBG" translatesAutoresizingMaskIntoConstraints="NO" id="mSm-Qr-fhI">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="AppBG" translatesAutoresizingMaskIntoConstraints="NO" id="mSm-Qr-fhI">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="163"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QhX-r5-LQE">
@@ -617,7 +617,6 @@
                                 <constraint firstAttribute="bottom" secondItem="mSm-Qr-fhI" secondAttribute="bottom" id="3Fk-Wx-u3h"/>
                                 <constraint firstItem="QhX-r5-LQE" firstAttribute="centerY" secondItem="hKD-p3-4h2" secondAttribute="centerY" id="D4h-c5-nKf"/>
                                 <constraint firstItem="QhX-r5-LQE" firstAttribute="centerX" secondItem="hKD-p3-4h2" secondAttribute="centerX" id="Ikw-fz-drd"/>
-                                <constraint firstItem="mSm-Qr-fhI" firstAttribute="top" secondItem="hKD-p3-4h2" secondAttribute="top" id="RKL-zk-513"/>
                                 <constraint firstAttribute="trailing" secondItem="mSm-Qr-fhI" secondAttribute="trailing" id="aoF-4c-K5G"/>
                                 <constraint firstItem="mSm-Qr-fhI" firstAttribute="leading" secondItem="hKD-p3-4h2" secondAttribute="leading" id="iQW-uM-65L"/>
                             </constraints>
@@ -755,16 +754,20 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lg7-uv-DLK">
                                     <rect key="frame" x="20" y="11" width="43" height="30"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="30" id="dLn-sH-xC1"/>
+                                        <constraint firstAttribute="height" constant="30" id="TP3-hD-rQe"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgL-9J-mhm">
-                                    <rect key="frame" x="322" y="11" width="33" height="30"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgL-9J-mhm">
+                                    <rect key="frame" x="275" y="11" width="80" height="30"/>
                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
-                                    <state key="normal" title="Sort"/>
+                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="   Sort  " image="SortIcon">
+                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
                                     <connections>
                                         <action selector="sortActionPressed:" destination="YAo-Pl-e3t" eventType="touchUpInside" id="bNU-ll-orl"/>
                                     </connections>
@@ -772,28 +775,28 @@
                             </subviews>
                             <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="Lg7-uv-DLK" secondAttribute="bottom" constant="11" id="6Jq-qP-amr"/>
-                                <constraint firstItem="Lg7-uv-DLK" firstAttribute="leading" secondItem="AFn-q7-agO" secondAttribute="leading" constant="20" id="MEl-ge-bSK"/>
-                                <constraint firstAttribute="trailing" secondItem="SgL-9J-mhm" secondAttribute="trailing" constant="20" id="eE5-5M-oBt"/>
-                                <constraint firstAttribute="bottom" secondItem="SgL-9J-mhm" secondAttribute="bottom" constant="11" id="hSM-9I-TzC"/>
-                                <constraint firstItem="SgL-9J-mhm" firstAttribute="top" secondItem="AFn-q7-agO" secondAttribute="top" constant="11" id="o7n-Du-kW0"/>
-                                <constraint firstItem="Lg7-uv-DLK" firstAttribute="top" secondItem="AFn-q7-agO" secondAttribute="top" constant="11" id="zZ9-Iv-y9w"/>
+                                <constraint firstAttribute="bottom" secondItem="Lg7-uv-DLK" secondAttribute="bottom" constant="11" id="6o6-uK-P83"/>
+                                <constraint firstItem="SgL-9J-mhm" firstAttribute="top" secondItem="AFn-q7-agO" secondAttribute="top" constant="11" id="726-2N-WIF"/>
+                                <constraint firstItem="Lg7-uv-DLK" firstAttribute="leading" secondItem="AFn-q7-agO" secondAttribute="leading" constant="20" id="9cn-id-oDp"/>
+                                <constraint firstItem="Lg7-uv-DLK" firstAttribute="top" secondItem="AFn-q7-agO" secondAttribute="top" constant="11" id="QLk-IV-4NP"/>
+                                <constraint firstAttribute="trailing" secondItem="SgL-9J-mhm" secondAttribute="trailing" constant="20" id="Zjd-TR-DKa"/>
+                                <constraint firstAttribute="bottom" secondItem="SgL-9J-mhm" secondAttribute="bottom" constant="11" id="m8d-rE-H8D"/>
                             </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="AFn-q7-agO" firstAttribute="trailing" secondItem="zpy-Yx-DGa" secondAttribute="trailing" id="403-j9-qg5"/>
-                        <constraint firstItem="phM-2F-vUb" firstAttribute="leading" secondItem="zpy-Yx-DGa" secondAttribute="leading" id="B3Y-ZT-ak0"/>
-                        <constraint firstItem="AFn-q7-agO" firstAttribute="top" secondItem="phM-2F-vUb" secondAttribute="bottom" id="ESF-4L-heF"/>
-                        <constraint firstItem="phM-2F-vUb" firstAttribute="trailing" secondItem="zpy-Yx-DGa" secondAttribute="trailing" id="Q04-ag-58x"/>
-                        <constraint firstItem="phM-2F-vUb" firstAttribute="top" secondItem="zpy-Yx-DGa" secondAttribute="top" id="ZJo-52-dia"/>
-                        <constraint firstItem="t4C-J0-00E" firstAttribute="trailing" secondItem="zpy-Yx-DGa" secondAttribute="trailing" id="fAV-5V-EjG"/>
-                        <constraint firstItem="t4C-J0-00E" firstAttribute="leading" secondItem="zpy-Yx-DGa" secondAttribute="leading" id="hHv-WX-G20"/>
-                        <constraint firstItem="t4C-J0-00E" firstAttribute="top" secondItem="zpy-Yx-DGa" secondAttribute="top" id="kpq-nr-6eN"/>
-                        <constraint firstItem="t4C-J0-00E" firstAttribute="height" secondItem="phM-2F-vUb" secondAttribute="height" id="otH-fe-YUB"/>
-                        <constraint firstItem="AFn-q7-agO" firstAttribute="leading" secondItem="zpy-Yx-DGa" secondAttribute="leading" id="t8P-1v-cCQ"/>
-                        <constraint firstItem="AFn-q7-agO" firstAttribute="bottom" secondItem="zpy-Yx-DGa" secondAttribute="bottom" id="zok-HK-ZHE"/>
+                        <constraint firstItem="t4C-J0-00E" firstAttribute="trailing" secondItem="zpy-Yx-DGa" secondAttribute="trailing" id="HCh-dJ-2mA"/>
+                        <constraint firstItem="t4C-J0-00E" firstAttribute="top" secondItem="rX9-f1-aaX" secondAttribute="top" id="MQ9-uX-lvy"/>
+                        <constraint firstItem="phM-2F-vUb" firstAttribute="leading" secondItem="zpy-Yx-DGa" secondAttribute="leading" id="Te5-cu-9KJ"/>
+                        <constraint firstAttribute="bottom" secondItem="phM-2F-vUb" secondAttribute="bottom" constant="52" id="aVA-Gi-p6G"/>
+                        <constraint firstAttribute="bottom" secondItem="t4C-J0-00E" secondAttribute="bottom" constant="52" id="doH-BY-dJG"/>
+                        <constraint firstItem="phM-2F-vUb" firstAttribute="trailing" secondItem="zpy-Yx-DGa" secondAttribute="trailing" id="fGy-XD-12B"/>
+                        <constraint firstAttribute="bottom" secondItem="AFn-q7-agO" secondAttribute="bottom" id="hN4-6o-vTq"/>
+                        <constraint firstItem="AFn-q7-agO" firstAttribute="trailing" secondItem="zpy-Yx-DGa" secondAttribute="trailing" id="hvf-G1-ugY"/>
+                        <constraint firstItem="phM-2F-vUb" firstAttribute="top" secondItem="rX9-f1-aaX" secondAttribute="top" id="pIs-g2-SG1"/>
+                        <constraint firstItem="t4C-J0-00E" firstAttribute="leading" secondItem="zpy-Yx-DGa" secondAttribute="leading" id="ssU-41-Hjz"/>
+                        <constraint firstItem="AFn-q7-agO" firstAttribute="leading" secondItem="zpy-Yx-DGa" secondAttribute="leading" id="vPa-2h-vkE"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="zpy-Yx-DGa"/>
                 </view>
@@ -843,7 +846,7 @@
                             </connections>
                         </tableView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMM-Fi-eIh">
-                            <rect key="frame" x="16" y="0.0" width="43" height="41"/>
+                            <rect key="frame" x="16" y="0.0" width="42" height="41"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="41" id="LEk-11-1S4"/>
                             </constraints>
@@ -1144,7 +1147,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not replied yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYO-K9-cX5">
-                                                    <rect key="frame" x="16" y="15" width="104.5" height="20.5"/>
+                                                    <rect key="frame" x="16" y="16.5" width="98.5" height="17.5"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1404,7 +1407,7 @@
                             </connections>
                         </textView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgU-hP-7wx">
-                            <rect key="frame" x="324" y="33.5" width="31" height="33"/>
+                            <rect key="frame" x="324" y="35" width="31" height="30"/>
                             <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="15"/>
                             <state key="normal" title="Post">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1492,6 +1495,9 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="QUt-Az-UmB" id="uzj-df-KIt"/>
+                                                    </connections>
                                                 </textView>
                                             </subviews>
                                             <constraints>
@@ -1617,10 +1623,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pwq-PO-TMu">
-                                <rect key="frame" x="0.0" y="61" width="375" height="502"/>
+                                <rect key="frame" x="0.0" y="61" width="375" height="506"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hdW-bD-GoC">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="506"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -1633,7 +1639,7 @@
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGN-H7-w0O">
-                                <rect key="frame" x="105" y="611" width="165" height="36"/>
+                                <rect key="frame" x="105" y="615" width="165" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="165" id="xOs-Qg-jbn"/>
                                 </constraints>
@@ -1834,7 +1840,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Affliation/Institution" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Nfx-cX-DUu" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                                    <rect key="frame" x="20" y="28" width="335" height="24"/>
+                                                    <rect key="frame" x="20" y="30" width="335" height="20"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
@@ -1890,7 +1896,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Designation" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0pQ-SA-ZXk" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                                    <rect key="frame" x="20" y="28" width="335" height="24"/>
+                                                    <rect key="frame" x="20" y="30" width="335" height="20"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
@@ -1946,7 +1952,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MCI/Medical Council Number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="q35-Eh-THd" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                                    <rect key="frame" x="20" y="28" width="335" height="24"/>
+                                                    <rect key="frame" x="20" y="30" width="335" height="20"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
@@ -2085,7 +2091,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="039-4a-2LF" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                                    <rect key="frame" x="20" y="28" width="335" height="24"/>
+                                                    <rect key="frame" x="20" y="30" width="335" height="20"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
@@ -2141,7 +2147,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="L5N-OX-Orz" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                                    <rect key="frame" x="20" y="28" width="335" height="24"/>
+                                                    <rect key="frame" x="20" y="30" width="335" height="20"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
@@ -2197,7 +2203,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="grK-TC-7gY" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                                    <rect key="frame" x="20" y="28" width="335" height="24"/>
+                                                    <rect key="frame" x="20" y="30" width="335" height="20"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
@@ -2253,7 +2259,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AQ0-GR-68U" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                                    <rect key="frame" x="20" y="28" width="335" height="24"/>
+                                                    <rect key="frame" x="20" y="30" width="335" height="20"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" returnKeyType="next"/>
@@ -2435,7 +2441,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SiU-dA-Uxu" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                                    <rect key="frame" x="20" y="28" width="335" height="24"/>
+                                                    <rect key="frame" x="20" y="30" width="335" height="20"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done"/>
@@ -2619,6 +2625,7 @@
         <image name="Default image" width="256" height="256"/>
         <image name="MediknitLogo" width="960" height="540"/>
         <image name="NavigationBG" width="512" height="100"/>
+        <image name="SortIcon" width="20" height="20"/>
         <image name="ThumbsUp" width="32" height="32"/>
         <image name="checkmarkSelected" width="25" height="25"/>
         <image name="checkmarkUnselected" width="25" height="25"/>
