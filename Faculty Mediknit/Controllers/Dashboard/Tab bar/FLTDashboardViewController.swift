@@ -15,11 +15,4 @@ class FLTDashboardViewController: UITabBarController {
 
         self.setNavigationBarItem(isSidemenuEnabled: true)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationItem.title = "All Questions"
-    }
-    
-    
 }

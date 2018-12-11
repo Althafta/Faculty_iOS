@@ -42,6 +42,11 @@ class FLTAllQuestionsTableViewController: UITableViewController,popUpDelegate {
         self.sortHeading.text = self.arraySortList[0]
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.navigationItem.title = "All Questions"
+    }
+    
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
