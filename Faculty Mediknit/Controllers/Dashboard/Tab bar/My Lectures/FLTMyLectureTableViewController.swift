@@ -8,15 +8,20 @@
 
 import UIKit
 
-class FLTMyLectureTableViewController: UITableViewController {
+class FLTMyLectureTableViewController: UITableViewController,popUpDelegate {
 
     @IBOutlet var viewHeader: UIView!
     @IBOutlet weak var labelSortHeader: UILabel!
     @IBOutlet weak var buttonSort: UIButton!
     
+    var selectedOrderIndex = 0
+    lazy var allQuestionPage = self.storyboard?.instantiateViewController(withIdentifier: "AllQuestionsTVC") as! FLTAllQuestionsTableViewController
+    var arraySortOrder = ["Newest first","Older first","with unanswered question first"]
+    var arraySortTextToDisplay = ["New","Older","Unanswered"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.labelSortHeader.text = self.arraySortTextToDisplay[self.selectedOrderIndex]
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -49,6 +54,32 @@ class FLTMyLectureTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 52
     }
+    
+    //MARK:- Button Actions
+    
     @IBAction func sortPressed(_ sender: UIButton) {
+        allQuestionPage.popUpView.arrayListItems = self.arraySortOrder
+        allQuestionPage.popUpView.delegate = self
+        allQuestionPage.popUpView.labelPopUpHeading.text = "Sort lectures"
+        allQuestionPage.popUpView.selectedIndex = self.selectedOrderIndex
+        allQuestionPage.popUpView.type = "sort"
+        allQuestionPage.popUpView.tableViewList.reloadData()
+        allQuestionPage.showPopUp()
+        allQuestionPage.blur()
+        allQuestionPage.animateIn()
+    }
+    
+    //MARK:- Sort popup delegate
+    
+    func getSelectedItems(item: String, index: Int, type: String) {
+        if type == "sort"{
+            ////Call API with new sort order
+            self.labelSortHeader.text = self.arraySortTextToDisplay[index]//item
+            self.selectedOrderIndex = index
+        }else if type == "report"{
+            
+        }
+        allQuestionPage.removeBlur()
+        allQuestionPage.animateOut()
     }
 }

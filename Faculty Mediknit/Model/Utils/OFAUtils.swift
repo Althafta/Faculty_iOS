@@ -1,5 +1,5 @@
 //  OFUtils.swift
-//  Ofabee_OLP
+//  Faculty Mediknit
 //
 //  Created by Enfin_iMac on 10/08/17.
 //  Copyright © 2017 enfin. All rights reserved.
@@ -221,7 +221,7 @@ class OFAUtils: NSObject {
     }
     class func getStringFromDate(_ date:Date)->String{
         let formatter = DateFormatter()
-        formatter.dateFormat="dd-MMM-yyyy"
+        formatter.dateFormat="dd MMM yyyy"
         let local = Locale(identifier: "en_US")
         formatter.locale=local
         return formatter.string(from: date)
@@ -350,14 +350,14 @@ class OFAUtils: NSObject {
         return randomString
     }
     
-    class func getDoneToolBarButton(tableView:UITableViewController,target:Selector?)-> UIToolbar {
+    class func getDoneToolBarButton(controller:UIViewController,target:Selector?)-> UIToolbar {
         let toolBar = UIToolbar()
         toolBar.barStyle = .default
         toolBar.isTranslucent = true
         toolBar.tintColor = self.getColorFromHexString(barTintColor)
         toolBar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "OK", style: .plain, target: tableView, action: target)
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: tableView, action: nil)
+        let doneButton = UIBarButtonItem(title: "OK", style: .plain, target: controller, action: target)
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: controller, action: nil)
         toolBar.setItems([flexibleSpace,doneButton], animated: true)
         toolBar.isUserInteractionEnabled = true
         return toolBar

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		64F696D32DDE18691CDFE6C0 /* Pods_Faculty_Mediknit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E777DC1C9CCA4CC5621BF372 /* Pods_Faculty_Mediknit.framework */; };
+		CE01BA1121C0D38E00EB86A0 /* FLTAboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01BA1021C0D38E00EB86A0 /* FLTAboutAppViewController.swift */; };
+		CE01BA1421C0E2A200EB86A0 /* FLTContactHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01BA1321C0E2A200EB86A0 /* FLTContactHelpViewController.swift */; };
 		CE1D5B65216DD0F600D4B9DF /* FLTAttachmentPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D5B64216DD0F600D4B9DF /* FLTAttachmentPreviewViewController.swift */; };
 		CE20631721BF9EB1000BAB24 /* FLTMyLectureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20631621BF9EB1000BAB24 /* FLTMyLectureTableViewCell.swift */; };
 		CE20631921BF9EC0000BAB24 /* FLTMyLectureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20631821BF9EC0000BAB24 /* FLTMyLectureTableViewController.swift */; };
@@ -142,6 +144,8 @@
 /* Begin PBXFileReference section */
 		7FFA5B6AF802B14DCF784D09 /* Pods-Faculty Mediknit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faculty Mediknit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Faculty Mediknit/Pods-Faculty Mediknit.debug.xcconfig"; sourceTree = "<group>"; };
 		9E07DF6C5EE9DDB7B60A5C93 /* Pods-Faculty Mediknit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faculty Mediknit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Faculty Mediknit/Pods-Faculty Mediknit.release.xcconfig"; sourceTree = "<group>"; };
+		CE01BA1021C0D38E00EB86A0 /* FLTAboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTAboutAppViewController.swift; sourceTree = "<group>"; };
+		CE01BA1321C0E2A200EB86A0 /* FLTContactHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTContactHelpViewController.swift; sourceTree = "<group>"; };
 		CE1D5B64216DD0F600D4B9DF /* FLTAttachmentPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTAttachmentPreviewViewController.swift; sourceTree = "<group>"; };
 		CE20631621BF9EB1000BAB24 /* FLTMyLectureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTMyLectureTableViewCell.swift; sourceTree = "<group>"; };
 		CE20631821BF9EC0000BAB24 /* FLTMyLectureTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTMyLectureTableViewController.swift; sourceTree = "<group>"; };
@@ -327,6 +331,48 @@
 				E777DC1C9CCA4CC5621BF372 /* Pods_Faculty_Mediknit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE01BA0D21C0D26300EB86A0 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CE602F1A215E12CE005D8E7F /* FLTDashboardViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		CE01BA0E21C0D33F00EB86A0 /* SideMenu List */ = {
+			isa = PBXGroup;
+			children = (
+				CE602F13215E0938005D8E7F /* FLTLeftSideMenuTableViewController.swift */,
+				CE4FF008216F183000B49E2E /* FLTLeftMenuContainerViewController.swift */,
+			);
+			path = "SideMenu List";
+			sourceTree = "<group>";
+		};
+		CE01BA0F21C0D35800EB86A0 /* SideMenu Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE01BA1221C0D39C00EB86A0 /* About */,
+				CE01BA1521C0E2B100EB86A0 /* Contact help */,
+			);
+			path = "SideMenu Controllers";
+			sourceTree = "<group>";
+		};
+		CE01BA1221C0D39C00EB86A0 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				CE01BA1021C0D38E00EB86A0 /* FLTAboutAppViewController.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		CE01BA1521C0E2B100EB86A0 /* Contact help */ = {
+			isa = PBXGroup;
+			children = (
+				CE01BA1321C0E2A200EB86A0 /* FLTContactHelpViewController.swift */,
+			);
+			path = "Contact help";
 			sourceTree = "<group>";
 		};
 		CE20631A21BF9ED0000BAB24 /* My Lectures */ = {
@@ -714,8 +760,8 @@
 		CEFD4C21215E334500DE3FFB /* Left side menu */ = {
 			isa = PBXGroup;
 			children = (
-				CE602F13215E0938005D8E7F /* FLTLeftSideMenuTableViewController.swift */,
-				CE4FF008216F183000B49E2E /* FLTLeftMenuContainerViewController.swift */,
+				CE01BA0E21C0D33F00EB86A0 /* SideMenu List */,
+				CE01BA0F21C0D35800EB86A0 /* SideMenu Controllers */,
 			);
 			path = "Left side menu";
 			sourceTree = "<group>";
@@ -723,7 +769,7 @@
 		CEFD4C22215E334F00DE3FFB /* Tab bar */ = {
 			isa = PBXGroup;
 			children = (
-				CE602F1A215E12CE005D8E7F /* FLTDashboardViewController.swift */,
+				CE01BA0D21C0D26300EB86A0 /* TabBar */,
 				CE33B6742161E547009CA5D6 /* All Questions */,
 				CE20631B21BF9EE1000BAB24 /* My Lectures */,
 			);
@@ -957,6 +1003,7 @@
 				CEF7E16A215CA677001C8EA7 /* UIImage+MultiFormat.m in Sources */,
 				CEF7E15B215CA677001C8EA7 /* UIImage+GIF.m in Sources */,
 				CEF7E217215CE4DB001C8EA7 /* FLTRegisterTableViewController.swift in Sources */,
+				CE01BA1421C0E2A200EB86A0 /* FLTContactHelpViewController.swift in Sources */,
 				CEF7E163215CA677001C8EA7 /* UIImageView+HighlightedWebCache.m in Sources */,
 				CE602F16215E09A7005D8E7F /* FLTAllQuestionsTableViewController.swift in Sources */,
 				CEF7E168215CA677001C8EA7 /* UIView+WebCache.m in Sources */,
@@ -981,6 +1028,7 @@
 				CEF7E161215CA677001C8EA7 /* SDWebImagePrefetcher.m in Sources */,
 				CEF7E12A215CA4BC001C8EA7 /* OFAConstants.swift in Sources */,
 				CE63B1C7215C99CF00B02075 /* AppDelegate.swift in Sources */,
+				CE01BA1121C0D38E00EB86A0 /* FLTAboutAppViewController.swift in Sources */,
 				CE4FF00B216F75BA00B49E2E /* FLTReplyWithImageAndTextTableViewCell.swift in Sources */,
 				CEDBABC1215CFF8B003396E6 /* FLTAddPhotoViewController.swift in Sources */,
 				CEF7E126215CA4B1001C8EA7 /* SwiftLoader.swift in Sources */,

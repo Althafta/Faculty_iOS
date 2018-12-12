@@ -21,7 +21,7 @@ class FLTRegisterTableViewController: UITableViewController,UnderLineTextFieldDe
         super.viewDidLoad()
 
         self.buttonRequest.layer.cornerRadius = self.buttonRequest.frame.height/2
-        self.textMobile.inputAccessoryView = OFAUtils.getDoneToolBarButton(tableView: self, target: #selector(self.tapAction))
+        self.textMobile.inputAccessoryView = OFAUtils.getDoneToolBarButton(controller: self, target: #selector(self.tapAction))
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(self.tapAction))
         singleTap.numberOfTapsRequired = 1
         self.view.addGestureRecognizer(singleTap)

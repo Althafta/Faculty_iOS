@@ -1,11 +1,3 @@
-//
-//  Constants.swift
-//  CompassForSuccess
-//
-//  Created by Bon User on 9/5/16.
-//  Copyright © 2016 Bon User. All rights reserved.
-//
-
 import Foundation
 
 //APIDetails :- http://beta.ofabee.com/assets/apis/

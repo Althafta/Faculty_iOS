@@ -1,11 +1,3 @@
-//
-//  Snackbar.swift
-//  snackbar
-//
-//  Created by Нейкович Сергей on 30.11.16.
-//  Copyright © 2016 CubInCup. All rights reserved.
-//
-
 import UIKit
 
 enum SBAnimationLength {

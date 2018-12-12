@@ -1,9 +1,9 @@
 //
 //  TabySegmentedControl.swift
-//  UISegmentedControlAsTabbarDemo
+//  Faculty Mediknit
 //
-//  Created by Ahmed Abdurrahman on 9/16/15.
-//  Copyright © 2015 A. Abdurrahman. All rights reserved.
+//  Created by Syam PJ on 11/12/18.
+//  Copyright © 2018 Syam PJ. All rights reserved.
 //
 
 import UIKit

@@ -20,7 +20,7 @@ class FLTQuestionDetailsRepliesTableViewController: UITableViewController,UIText
         self.textViewReply.layer.cornerRadius = 4
         self.textViewReply.layer.borderWidth = 1.0
         self.textViewReply.layer.borderColor = OFAUtils.getColorFromHexString(barTintColor).cgColor
-        self.textViewReply.inputAccessoryView = OFAUtils.getDoneToolBarButton(tableView: self, target: #selector(self.dismissKeyboard))
+        self.textViewReply.inputAccessoryView = OFAUtils.getDoneToolBarButton(controller: self, target: #selector(self.dismissKeyboard))
         self.buttonPost.titleLabel?.textColor = .black
     }
 

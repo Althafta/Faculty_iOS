@@ -27,7 +27,7 @@ class FLTAddAttachmentTableViewController: UITableViewController,UITextViewDeleg
         self.textViewDescription.layer.cornerRadius = 4
         self.textViewDescription.layer.borderWidth = 1.0
         self.textViewDescription.layer.borderColor = UIColor.gray.cgColor
-        self.textViewDescription.inputAccessoryView = OFAUtils.getDoneToolBarButton(tableView: self, target: #selector(self.dismissKeyboard))
+        self.textViewDescription.inputAccessoryView = OFAUtils.getDoneToolBarButton(controller: self, target: #selector(self.dismissKeyboard))
         
         self.scrollViewImage.delegate = self
         self.scrollViewImage.minimumZoomScale = 1.0

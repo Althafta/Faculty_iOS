@@ -1,27 +1,3 @@
-//
-//  UIImageView+Letters.m
-//
-//  Created by Tom Bachant on 6/17/14.
-//  Copyright (c) 2014 Tom Bachant. All rights reserved.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
-
 #import "UIImageView+Letters.h"
 
 // This multiplier sets the font size based on the view bounds
@@ -77,20 +53,20 @@ static const CGFloat kFontResizingProportion = 0.42f;
             [displayString appendString:[firstWord substringWithRange:firstLetterRange]];
         }
         
-        if ([words count] >= 2) {
-            NSString *lastWord = [words lastObject];
-            
-            while ([lastWord length] == 0 && [words count] >= 2) {
-                [words removeLastObject];
-                lastWord = [words lastObject];
-            }
-            
-            if ([words count] > 1) {
-                // Get character range to handle emoji (emojis consist of 2 characters in sequence)
-                NSRange lastLetterRange = [lastWord rangeOfComposedCharacterSequencesForRange:NSMakeRange(0, 1)];
-                [displayString appendString:[lastWord substringWithRange:lastLetterRange]];
-            }
-        }
+//        if ([words count] >= 2) {
+//            NSString *lastWord = [words lastObject];
+//
+//            while ([lastWord length] == 0 && [words count] >= 2) {
+//                [words removeLastObject];
+//                lastWord = [words lastObject];
+//            }
+//
+//            if ([words count] > 1) {
+//                // Get character range to handle emoji (emojis consist of 2 characters in sequence)
+//                NSRange lastLetterRange = [lastWord rangeOfComposedCharacterSequencesForRange:NSMakeRange(0, 1)];
+//                [displayString appendString:[lastWord substringWithRange:lastLetterRange]];
+//            }
+//        }
     }
     
     UIColor *backgroundColor = color ? color : [self randomColor];
