@@ -829,7 +829,7 @@
 				TargetAttributes = {
 					CE63B1C2215C99CF00B02075 = {
 						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -945,7 +945,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Faculty Mediknit/Pods-Faculty Mediknit-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Faculty Mediknit/Pods-Faculty Mediknit-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/FAPanels/FAPanels.framework",
@@ -968,7 +968,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Faculty Mediknit/Pods-Faculty Mediknit-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Faculty Mediknit/Pods-Faculty Mediknit-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1BC1FE7FD9A42BF4A58F9C11 /* [CP] Check Pods Manifest.lock */ = {
@@ -1215,7 +1215,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Faculty Mediknit/Faculty Mediknit-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1237,7 +1237,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.healthconnect.Faculty-Mediknit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Faculty Mediknit/Faculty Mediknit-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
